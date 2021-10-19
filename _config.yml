@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               :
 facebook:
   username               :
   app_id                 :
@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Federico Pichi"
-  avatar           : "profile.png"
+  avatar           : "profile_picture.png"
   bio              : "Ph.D. in Mathematical Analysis, Modelling and Applications"
   location         : "EPFL, Lausanne"
   employer         :
