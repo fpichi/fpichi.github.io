@@ -60,9 +60,8 @@ def html_escape(text):
     """Produce entities within text."""
     return "".join(html_escape_table.get(c, c) for c in text)
 
-
+item = 1
 for pubsource in publist:
-    item = 1
     print("")
     print("Scanning for ", pubsource)
     parser = bibtex.Parser()
@@ -136,6 +135,7 @@ for pubsource in publist:
             if "note" in b.keys():
                 if len(str(b["note"])) > 5:
                     md += "\nexcerpt: '" + html_escape(b["note"]) + "'"
+                    md += "\npaperurl: '" + 'https://arxiv.org/abs/' + b["note"][6:] + "'"
                     note = True
 
             md += "\ndate: " + str(pub_date)
@@ -145,9 +145,9 @@ for pubsource in publist:
             md += "\nvenue: '" + html_escape(venue) + "'"
 
             url = False
-            if "url" in b.keys():
-                if len(str(b["url"])) > 5:
-                    md += "\npaperurl: '" + b["url"] + "'"
+            if "doi" in b.keys():
+                if len(str(b["doi"])) > 5:
+                    md += "\npaperurl: '" + 'https://doi.org/' + b["doi"] + "'"
                     url = True
 
             md += "\nauthors: '" + html_escape(authors) + "'"
