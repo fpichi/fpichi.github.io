@@ -1,0 +1,256 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+\usepackage{tikz}
+\usepackage{sidenotes}
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%\thispagestyle{empty} % Stop the page count at the bottom of the first page
+\pagestyle{plain}
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{tikzpicture}[remember picture, overlay]
+%\node [anchor=north west, inner sep=10pt] at (current page.north west)
+%{\includegraphics[height=4cm]{photo_profile.jpg}};
+%\end{tikzpicture}
+
+\begin{cv}{\spacedallcaps{Federico Pichi}}\vspace{1.5em} % Your name
+
+\vspace{5.5em}
+
+\begin{marginfigure}%
+\includegraphics[width=\marginparwidth]{photo_profile.jpg}
+\end{marginfigure}
+
+\vspace{-5.5em}
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{}{\textit{Born in Rome, Italy}}{23 February 1992\newline Ph.D. in \href{http://www.math.sissa.it/content/mathematical-analysis-modelling-and-applications-0}{Mathematical Analysis, Modelling and Applications} \newline} % Birthplace and date
+
+\NewEntry{email}{\href{mailto:fpichi@sissa.it}{fpichi@sissa.it}} % Email address
+
+\NewEntry{website}{\href{http://people.sissa.it/~fpichi/}{http://people.sissa.it/$\sim$fpichi/}} % Personal website
+
+%\NewEntry{phone}{+39 (347) 145 1948}  % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{Position}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+%\NewEntry{2016-Today}{SISSA, \ Trieste (Italy)}
+
+\Description{\MarginText{Current Position}PostDoc researcher at \href{https://www.sissa.it}{SISSA} (International School for Advanced Studies) and \href{https://www.epfl.ch/en}{EPFL} (\'Ecole Polytechnique F\'ed\'erale de Lausanne) with CRUI fellowship. \newline
+Member of \href{https://mathlab.sissa.it}{mathLab} group, Mathematics Area, via Bonomea 265, Trieste, Italy.}
+ % Current position
+
+%\vspace{1em}
+
+\Description{\MarginText{Research Interests}Numerical analysis of bifurcating phenomena held by non-linear equations.\newline
+Reduced order models in computational Continuum Mechanics, Fluid Dynamics and Quantum Mechanics with applications to Artificial Neural Networks, Optimal Control Problems and Fluid-Structure Interaction.}
+
+%\vspace{1em}
+%
+%\Description{\MarginText{Advisor}Prof. Gianluigi Rozza
+%\\ \MarginText{Co-Advisor} Dr. Francesco Ballarin}
+
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Publications}\vspace{1em}
+
+\Description{\MarginText{[8]}{\color{blue} ``Artificial neural network for bifurcating phenomena modelled by nonlinear parametrized PDEs"}\\ F. \textsc{Pichi}, ~F. \textsc{Ballarin}, ~G. \textsc{Rozza}, ~J.~S.\textsc{Hesthaven}.\\ In: Preprint.}\vspace{-0.2cm}
+%------------------------------------------------
+\Description{\MarginText{[7]}{\color{blue} ``A successive partition method for the efficient evaluation of parametrized stability factors"}\\  F. \textsc{Ballarin}, ~F. \textsc{Pichi}, ~G. \textsc{Rozza}.\\ In: Preprint.}\vspace{-0.2cm}
+%------------------------------------------------
+\Description{\MarginText{[6]}{\color{blue} ``Driving bifurcating parametrized nonlinear PDEs by optimal control strategies: application to Navier-Stokes equations and model reduction"}\\ F. \textsc{Pichi}, ~M. \textsc{Strazzullo}, ~F. \textsc{Ballarin}, ~G. \textsc{Rozza}.\\ In: \href{https://arxiv.org/abs/2010.13506}{arXiv 2010.13506}.}\vspace{-0.2cm}
+%------------------------------------------------
+\Description{\MarginText{[5]}{\color{blue} ``Reduced order models for the buckling of hyperelastic beams."}\\ F. \textsc{Pichi}, ~J. \textsc{Eftang}, ~G. \textsc{Rozza}, ~A.~T. \textsc{Patera}.\\ In: Report MIT-FVG “ROM2S”}\vspace{-0.2cm}
+%------------------------------------------------
+\Description{\MarginText{[4]}{\color{blue} ``Efficient computation of bifurcation diagrams with a deflated approach to reduced basis spectral element method"}\\ M. \textsc{Pintore}, ~F. \textsc{Pichi}, ~M. \textsc{Hess}, ~G. \textsc{Rozza}, ~C. \textsc{Canuto}.\\ In:  \href{https://link.springer.com/article/10.1007/s10444-020-09827-6}{Advances in Computational Mathematics, 47:1, 2021}.}\vspace{-0.2cm}
+%------------------------------------------------
+\Description{\MarginText{[3]}{\color{blue} ``A Reduced Order technique to study bifurcating phenomena: application to the Gross-Pitaevskii equation"}\\ F. \textsc{Pichi}, ~A. \textsc{Quaini}, ~G. \textsc{Rozza}.\\ In: \href{https://epubs.siam.org/doi/abs/10.1137/20M1313106}{SIAM Journal on Scientific Computing, 42:5, B1115-B1135, 2020}.}\vspace{-0.2cm}
+%------------------------------------------------
+\Description{\MarginText{[2]}{\color{blue} ``Reduced basis approaches for parametrized bifurcation problems held by non-linear von K\' arm\' an equations"}\\ F. \textsc{Pichi}, ~G. \textsc{Rozza}.\\ In: \href{http://link.springer.com/article/10.1007/s10915-019-01003-3}{Journal of Scientific Computing, 10.1007/s10915-019-01003-3, 2019.}}\vspace{-0.2cm}
+%------------------------------------------------
+\Description{\MarginText{[1]}{\color{blue} ``Reduced Basis Approximation and A Posteriori Error Estimation: Applications to Elasticity Problems in Several Parametric Settings"}\\ D.B.P. \textsc{Huynh}, ~F. \textsc{Pichi} and ~G. \textsc{Rozza}.\\ In: \href{https://link.springer.com/chapter/10.1007\%2F978-3-319-94676-4_8}{Numerical Methods for PDEs: State of the Art Techniques, Springer International Publishing, Ch. 8, 203--247, 2018.}}
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{1em}
+
+\NewEntry{2016-2020}{SISSA, \ Trieste (Italy)}
+
+\Description{\MarginText{Ph.D. degree}Mathematical Analysis, Modelling and Applications \ \ $\cdotp$\ \ Mathematics Area \newline
+Thesis: \textit{Reduced order models for parametric bifurcation problems in nonlinear PDEs}\newline
+Advisors: Prof.~Gianluigi \textsc{Rozza} \&  Dr.~Francesco \textsc{Ballarin}\newline
+Final Grading \ \ \textit{cum laude}}
+
+\NewEntry{2014-2016}{`La Sapienza' University, \ Rome (Italy)}
+
+\Description{\MarginText{Master degree}Applied Mathemathics \ \ $\cdotp$\ \ Department of Mathematics \newline
+Thesis: \textit{Reduced order methods for parametric Von K\' arm\' an equations}\newline
+Advisors: Prof.~Maurizio \textsc{Falcone} \&  Prof.~Gianluigi \textsc{Rozza}\newline
+Final Grading \ \ \textit{110/110 cum laude}}
+%------------------------------------------------
+
+%\NewEntry{2011-2014}{`La Sapienza' University, \ Rome (Italy)}
+%
+%\Description{\MarginText{Bachelor degree}Mathemathics \ \ $\cdotp$\ \ Department of Mathematics \newline
+%Thesis: \textit{Disconituous differential equations in control theory}\newline
+%Advisor: Prof.~Corrado \textsc{Mascia}\newline
+%Final Grading \ \ \textit{110/110 cum laude}}
+%
+%%------------------------------------------------
+%
+%%\NewEntry{2006-2011}{Liceo Scientifico Isacco Newton, \ Rome (Italy)}
+%%
+%%\Description{\MarginText{Secondary School Diploma}Scientific Diploma \newline
+%%Final Grading \ \ \textit{100/100}}
+%%------------------------------------------------
+%
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Other Information}\vspace{1em}
+
+\Description{\MarginText{Teaching and \\Tasks}{\color{cyan} Lecturer} - ``Reduced order modelling in bifurcating parametrised non-linear equations", SISSA, Trieste, 2019.}
+
+\vspace{-0.5em}
+
+\Description{{\color{cyan} Matlab} - Bachelor Degree in Mathematics, University of Trieste, 2019.}
+
+\vspace{-0.5em}
+
+\Description{{\color{cyan} Co-advisor} - Master thesis of Moreno Pintore, ``Efficient Computation of Bifurcation Diagrams with Spectral Element Method and Reduced Order Models". Master degree in Mathematical Engineering, Politecnico di Torino, Italy (Oct. 2019).}
+\vspace{-0.5em}
+\Description{{\color{cyan} Co-advisor} - Master thesis of Moaad Khamlich, ``Reduced order models for bifurcating phenomena in Fluid-Structure Interaction problems". Master degree in Mathematical Engineering, Politecnico di Milano, Italy, ongoing.}
+\vspace{-0.5em}
+\Description{{\color{cyan} President} \href{http://www.math.sissa.it/content/sissa-siam-student-chapter}{SISSA Siam Student Chapter (2019-2020)}}
+\vspace{-0.5em}
+\Description{{\color{cyan} Reviewer} \href{https://www.worldscientific.com/worldscinet/ijbc}{International Journal of Bifurcation and Chaos}, \href{http://www.ams.org/publications/math-reviews/math-reviews}{AMS Math. Reviews}}
+\vspace{-0.5em}
+\Description{{\color{cyan} Organizer} \href{https://www.math.sissa.it/seminar/siam-chapter-colloquia-2020}{SISSA SIAM Student Chapter Colloquia 2020, Virtual Event}}
+%------------------------------------------------
+
+\vspace{1em}
+
+\Description{\MarginText{Awards and Funding}{\color{violet}2021 CRUI project GO for IT}\ \ $\cdotp$\ \  Research grant between EPFL and SISSA: "Reduced order method for nonlinear PDEs enhanced by machine learning"}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{{\color{violet}2020 ECCOMAS Scholarship}\ \ $\cdotp$\ \   Grant for WCCM-ECCOMAS Virtual Congress}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{{\color{violet}2019 Banco Santander Financial Support Program}\ \ $\cdotp$\ \   Grant for 9th International Congress on Industrial and Applied Mathematics ICIAM2019}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+
+\Description{{\color{violet}2018 MIT-Italy - FVG Project}\ \ $\cdotp$\ \  ROM2S Reduced Order Methods at MIT and SISSA}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{{\color{violet}2018 INDAM GNCS}\ \ $\cdotp$\ \  Tecniche di riduzione di modello per le applicazioni mediche}
+%
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{{\color{violet}2017 INDAM GNCS}\ \ $\cdotp$\ \  Tecniche di riduzione computazionale e applicazioni}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+%
+%\Description{{\color{violet}2016 INDAM GNCS}\ \ $\cdotp$\ \  Tecniche di riduzione computazionale per le scienze applicate}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{{\color{violet}SISSA}\ \ $\cdotp$\ \ Master thesis fellowship for pre-graduate students}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{{\color{violet}Sapienza University}\ \ $\cdotp$\ \ Excellence course for Master degree in Applied Mathematics 2014-2016}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{{\color{violet}Sapienza University}\ \ $\cdotp$\ \ Excellence course for Bachelor degree in Mathematics 2011-2014}
+
+%------------------------------------------------
+
+\vspace{1em}
+
+\Description{\MarginText{Conferences \\ and \\ Workshops}{\color{orange}WCCM-ECCOMAS 2020 \href{https://www.wccm-eccomas2020.org/frontal/default.asp}{(talk)}}, {\color{orange}MORSS 2020 \href{https://morss2020.epfl.ch/wp-content/uploads/2020/08/MORSS2020_schedule.pdf}{(talk)}}, {\color{orange}SAMM 2020 - \href{https://indico.mpi-magdeburg.mpg.de/event/7/contributions/181/}{(poster)}}, {\color{orange}UMI 2019 - \href{http://umi.dm.unibo.it/congresso2019/programma/sezioni-speciali/s13-metodi-numerici-per-le-equazioni-alle-derivate-parziali/s13-venerdi-6-settembre/}{(talk)}}, {\color{orange}ICIAM 2019 - \href{https://iciam2019.org/index.php/scientific-program/program}{(talk)}}, {\color{orange}ROM in CFD - \href{https://www.researchgate.net/publication/334598670_Reduced_basis_methods_for_parametric_bifurcation_problems_in_nonlinear_PDEs}{(poster)}}, {\color{orange}CIME-EMS Summer School}, {\color{orange}ICOSAHOM 2018 - \href{https://ssl.linklings.net/conferences/icosahom/icosahom2018_program/views/by_area.html\#ptrack136}{(talk)}}, {\color{orange}MoRePaS 2018 - \href{https://www.scienceopen.com/document?vid=75ea1d95-ffa8-4f0a-8716-625a55a28fe5}{(poster)}}, {\color{orange}QUIET 2017},  {\color{orange}FEF 2017}, {\color{orange}EU-MORNET}. 
+}
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+%\spacedlowsmallcaps{Computer Skills}\vspace{1em}
+%
+%\Description{\MarginText{Basic}\textsc{html}, \textsc{R}, \textsc{C}, \textsc{C++}, \textsc{Fortran}}
+%
+%\Description{\MarginText{Advanced}\textsc{Matlab}, \textsc{FreeFem++}, \textsc{python}, \textsc{FEniCS}}
+
+%------------------------------------------------
+
+\end{cv}
+
+\end{document}
