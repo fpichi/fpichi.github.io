@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Federico Pichi's homepage"
+title                    : "Federico Pichi"
 title_separator          : "-"
 name                     : &name "Federico Pichi"
 description              : &description "Postdoctoral researcher"
