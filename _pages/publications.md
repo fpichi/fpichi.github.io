@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Publications"
+# title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
@@ -11,7 +11,7 @@ author_profile: true
 
 {% include base_path %}
 
-## Unpublished
+## Preprints
 
 {% for post in site.publications reversed %}
   {% if post.pubsource == "unpublished" %}

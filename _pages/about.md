@@ -8,12 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-Postdoctoral researcher at [SISSA](http://www.sissa.it/) (International School for Advanced Studies) and [EPFL](https://www.epfl.ch/) (École Polytechnique Fédérale de Lausanne) with [CRUI](https://www.fondazionecrui.it/) fellowship.  
-Member of [mathLab](https://mathlab.sissa.it/) group.
+Postdoctoral researcher at [EPFL](https://www.epfl.ch/) (École Polytechnique Fédérale de Lausanne) in the [MCSS](https://www.epfl.ch/labs/mcss/) group of Prof. [Jan S. Hesthaven](https://www.epfl.ch/labs/mcss/members/hesthaven/).  
 
 ### Bio
 Ph.D. in [Mathematical Analysis, Modelling and Applications](https://www.math.sissa.it/content/mathematical-analysis-modelling-and-applications-0)  
-Thesis: Reduced order models for parametric bifurcation problems in nonlinear PDEs  
+Thesis: <span style="color:black">"Reduced order models for parametric bifurcation problems in nonlinear PDEs"</span>  
 Advisor : [Prof. Gianluigi Rozza](http://people.sissa.it/~grozza/)  
 Co-Advisor : [Prof. Francesco Ballarin](https://www.francescoballarin.it)
 

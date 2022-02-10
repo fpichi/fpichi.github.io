@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Federico Pichi's homepage"
+title                    : "Federico Pichi"
 title_separator          : "-"
 name                     : &name "Federico Pichi"
 description              : &description "Postdoctoral researcher"
@@ -83,8 +83,8 @@ author:
   name             : "Federico Pichi"
   avatar           : "profile.png"
   bio              : "Ph.D. in Mathematical Analysis, Modelling and Applications"
-  location         : "EPFL, Lausanne"
-  employer         :
+  location         : "MCSS, MA C2 595"
+  employer         : "EPFL, Lausanne"
   pubmed           :
   googlescholar    : "https://scholar.google.it/citations?user=UYUZOlkAAAAJ&hl=it"
   email            : "fpichi@sissa.it, fpichi@epfl.ch"
