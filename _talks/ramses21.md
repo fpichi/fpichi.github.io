@@ -4,7 +4,7 @@ collection: talks
 type: "Talk"
 permalink: /talks/ramses21
 venue: "Virtual"
-date: 2021-09-01
+date: 2021-09-02
 location: "Trieste, Italy"
 ---
 
