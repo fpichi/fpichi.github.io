@@ -12,17 +12,17 @@ Postdoctoral researcher at [EPFL](https://www.epfl.ch/) (École Polytechnique F�
 
 ### Bio
 Ph.D. in [Mathematical Analysis, Modelling and Applications](https://www.math.sissa.it/content/mathematical-analysis-modelling-and-applications-0)  
-Thesis: [Reduced order models for parametric bifurcation problems in nonlinear PDEs](https://iris.sissa.it/handle/20.500.11767/114329)
+Thesis: [Reduced order models for parametric bifurcation problems in nonlinear PDEs](https://iris.sissa.it/handle/20.500.11767/114329)  
 Advisor : [Prof. Gianluigi Rozza](http://people.sissa.it/~grozza/)  
 Co-Advisor : [Prof. Francesco Ballarin](https://www.francescoballarin.it)
 
 ### Research interests
+* Machine learning techniques for parametrized PDEs. 
 * Reduced order models for complex bifurcating systems in: 
   * <span style="color:blue">Continuum Mechanics</span> -- Hyperelastic equation, Von Kármán system
   * <span style="color:blue">Quantum Mechanics</span> -- Bose-Einstein condensates 
   * <span style="color:blue">Fluid Dynamics</span> -- Navier-Stokes system
-  * <span style="color:blue">Multi-physics</span> -- Fluid-Structure Interaction
-* Machine learning techniques for parametrized PDEs.  
+  * <span style="color:blue">Multi-physics</span> -- Fluid-Structure Interaction 
 
 <!-- 
 This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
