@@ -60,6 +60,7 @@ def html_escape(text):
     """Produce entities within text."""
     return "".join(html_escape_table.get(c, c) for c in text)
 
+pub_day_list = [str(i) for i in range(10, 32)]
 item = 1
 for pubsource in publist:
     print("")
@@ -68,11 +69,11 @@ for pubsource in publist:
     bibdata = parser.parse_file(publist[pubsource]["file"])
 
     # loop through the individual references in a given bibtex file
-    for bib_id in bibdata.entries:
+    for (i, bib_id) in enumerate(bibdata.entries):
         # reset default date
         pub_year = "1900"
         pub_month = "01"
-        pub_day = "01"
+        pub_day = pub_day_list[i]
 
         b = bibdata.entries[bib_id].fields
         try:
