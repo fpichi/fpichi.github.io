@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.10.10)  16 APR 2023 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.10.10)  16 APR 2023 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -854,7 +854,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  110i,21n,106p,10639b,595s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {/Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/fpl/fplrc8a.pfb></Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/fpl/fplrij8a.pfb></Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplr8a.pfb></Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on CV.pdf (3 pages, 371350 bytes).
+Output written on CV.pdf (3 pages, 371351 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)
