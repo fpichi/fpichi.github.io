@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1682946926 "/Users/fede/Documents/fpichi.github.io/CV/CV.tex" "CV.pdf" "CV" 1682946928
-  "/Users/fede/Documents/fpichi.github.io/CV/CV.tex" 1682946925 26529 8dc826cd71a0ec5e8c6612dd7a897665 ""
+["pdflatex"] 1684332127 "/Users/fede/Documents/fpichi.github.io/CV/CV.tex" "CV.pdf" "CV" 1684332129
+  "/Users/fede/Documents/fpichi.github.io/CV/CV.tex" 1684332127 26599 732fea2113f7926815ed11ed47ffb731 ""
   "/Users/fede/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1681726553 356220 67d2d6164b86b4e6b4b1c10a33bf260a ""
   "/Users/fede/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1665421287 10796050 f788cab238ddca3d8fd50aec0f870501 ""
   "/Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc" 1649668589 4993 1194fb36dfcb11d9ae9802f2b00b60a3 ""
@@ -188,9 +188,9 @@
   "/Users/fede/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tocloft/tocloft.sty" 1649668921 37263 93f426e13c0c30a57da0f268ebb130e2 ""
   "/Users/fede/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty" 1649668600 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/Users/fede/Library/Application Support/MiKTeX/texmfs/install/tex/latex/xcolor/xcolor.sty" 1665421150 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "CV.aux" 1682946928 1259 3ff488acdbbc29ddcd97303f82db07c5 "pdflatex"
+  "CV.aux" 1684332129 1259 3ff488acdbbc29ddcd97303f82db07c5 "pdflatex"
   "CV.out" 0 -1 0 "pdflatex"
-  "CV.tex" 1682946925 26529 8dc826cd71a0ec5e8c6612dd7a897665 ""
+  "CV.tex" 1684332127 26599 732fea2113f7926815ed11ed47ffb731 ""
   "photo_profile.jpg" 1647367708 257695 fea5e72aa96060bf724d7b9199de4698 ""
   (generated)
   "CV.aux"
