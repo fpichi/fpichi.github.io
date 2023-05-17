@@ -6,6 +6,6 @@ date: 2023-01-17
 item: 11
 venue: 'Computers &amp; Fluids'
 paperurl: 'https://doi.org/10.1016/j.compfluid.2023.105813'
-authors: 'Federico Pichi, Francesco Ballarin, Gianluigi Rozza, Jan Hesthaven'
+authors: 'F. Pichi, F. Ballarin, G. Rozza, J. Hesthaven'
 pubsource: 'journal'
 ---
