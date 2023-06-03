@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.10.10)  17 MAY 2023 16:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2022.10.10)  3 JUN 2023 09:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -841,22 +841,22 @@ Package microtype Info: Character `013' is missing
 (microtype)             Ignoring protrusion settings for this character.
  [1
 
-{/Users/fede/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map} <./photo_profile.jpg>] [2] [3] (CV.aux)
+{/Users/fede/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map} <./photo_profile.jpg>] [2] [3] [4] (CV.aux)
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28486 strings out of 475386
- 588239 string characters out of 2768911
+ 28496 strings out of 475386
+ 588335 string characters out of 2768911
  1078460 words of memory out of 3000000
- 49190 multiletter control sequences out of 15000+600000
- 517823 words of font info for 228 fonts, out of 8000000 for 9000
+ 49191 multiletter control sequences out of 15000+600000
+ 518223 words of font info for 235 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,21n,106p,10639b,595s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {/Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/fpl/fplrc8a.pfb></Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/fpl/fplrij8a.pfb></Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplr8a.pfb></Users/fede/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on CV.pdf (3 pages, 372363 bytes).
+Output written on CV.pdf (4 pages, 374754 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 6 named destinations out of 1000 (max. 500000)
  81938 words of extra memory for PDF output out of 89155 (max. 10000000)
 
