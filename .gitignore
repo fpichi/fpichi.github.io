@@ -1,3 +1,8 @@
 _site/
 .DS_Store
 Gemfile.lock
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
