@@ -8,4 +8,13 @@ venue: 'Computers &amp; Fluids'
 paperurl: 'https://doi.org/10.1016/j.compfluid.2023.105813'
 authors: 'F. Pichi, F. Ballarin, G. Rozza, J. Hesthaven'
 pubsource: 'journal'
+biblio: '@article{PichiArtificialNeuralNetwork2023,
+  title = {An Artificial Neural Network Approach to Bifurcating Phenomena in Computational Fluid Dynamics},
+  author = {Pichi, F. and Ballarin, F. and Rozza, G. and Hesthaven, J. S.},
+  year = {2023},
+  journal = {Computers \& Fluids},
+  volume = {254},
+  pages = {105813},
+  doi = {10.1016/j.compfluid.2023.105813}
+}'
 ---

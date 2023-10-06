@@ -8,4 +8,14 @@ venue: 'Journal of Scientific Computing'
 paperurl: 'https://doi.org/10.1007/s10915-019-01003-3'
 authors: 'F. Pichi, G. Rozza'
 pubsource: 'journal'
+biblio: '@ARTICLE{pichirozza,
+	AUTHOR    = {Pichi, F.  and Rozza, G.},
+	TITLE     = {Reduced basis approaches for parametrized bifurcation problems held by non-linear {V}on {Karman} equations},
+	JOURNAL   = {Journal of Scientific Computing},
+	YEAR      = {2019},
+	DOI = {10.1007/s10915-019-01003-3},
+    VOLUME =   {81},
+    NUMBER={1},
+    PAGES =    {112--135}}
+    '
 ---
