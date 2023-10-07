@@ -101,7 +101,7 @@ clear: both;
     <p>
     <details>
       <summary><i style="background-color: #504545; color: #ffffff; cursor: pointer; padding: 5px; width: auto;  text-align: left; border: none; outline: none; border-radius: 5px;">bib</i></summary>
-      {{ post.biblio }}
+      {{ post.biblio | markdownify }}
     </details></p>
     </div>
     <div class="column" style=" width: 500px;">
