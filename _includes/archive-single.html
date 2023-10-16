@@ -14,24 +14,6 @@
 
 
 <style>
-  /* Style for the button and collapsible content
-  .collapsible {
-      background-color: #504545;
-      color: #ffffff;
-      cursor: pointer;
-      padding: 5px;
-      width: auto; 
-      text-align: left;
-      border: none;
-      outline: none;
-      border-radius: 5px;
-  }
-
-  .content {
-      display: none; 
-      padding: 5px;
-      border-top: 1px solid #ccc;
-  } */
   details > summary {
   list-style-type: '▶️';
 }
@@ -40,11 +22,6 @@ details[open] > summary {
   list-style-type: '🔽';
 }
 
-/* details {
-  border: 1px solid gray;
-  border-radius: 0.2rem;
-  padding: 0.5rem;
-} */
 
 details[open] > summary {
   margin-bottom: 0.5rem;
@@ -85,17 +62,18 @@ clear: both;
           alt="">
       </div>
     {% endif %}
-    <!-- <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
-    </h2> -->
+
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
     
+    {% if post.collection == 'teaching' %}
+      <p style="margin : 0; padding-top:0;"><span style="color:black;">[{{ post.item }}]</span>    <span style="color:red;"><i>{{ post.title }}</i></span></p>
+      {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}<p></p>
+      <div class="row">
+        <div class="column" style=" width: auto;"></div>
+        <div class="column" style=" width: 500px;">
+    {%elsif post.collection == 'publications' %}
     <div class="row">
     <div class="column" style=" width: auto;">
     <p>
@@ -105,93 +83,24 @@ clear: both;
     </details></p>
     </div>
     <div class="column" style=" width: 500px;">
-    {% if post.collection == 'teaching' %}
-      <p style="margin : 0; padding-top:0;"><span style="color:black;">[{{ post.item }}]</span>    <span style="color:red;"><i>{{ post.title }}</i></span></p>
-      {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}<p></p>
-    {%elsif post.collection == 'publications' %}
         <p> <span style="color:black;">[{{ post.item }}]</span>    {{ post.authors }}.  <span style="color:black;">{{ post.title }}.</span>
           {% if post.pubsource == 'journal' %}
             <i><a href="{{ post.paperurl }}" rel="permalink">{{ post.venue }}</a></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.  
-            <!-- <button class="collapsible">bib</button>
-            <div class="content">
-                {{ post.biblio }}
-            </div>
-        
-            <script>
-                // JavaScript to toggle the collapsible content
-                const button = document.querySelector(".collapsible");
-                const content = document.querySelector(".content");
-        
-                button.addEventListener("click", function () {
-                    content.style.display = content.style.display === "block" ? "none" : "block";
-                });
-            </script> -->
           {% elsif post.pubsource == 'unpublished' %}
-            <i><a href="{{ post.paperurl }}" rel="permalink">{{ post.venue }}</a></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.  
-            <!-- <script>
-                // JavaScript to toggle the collapsible content
-                const button = document.querySelector(".collapsible");
-                const content = document.querySelector(".content");
-        
-                button.addEventListener("click", function () {
-                    content.style.display = content.style.display === "block" ? "none" : "block";
-                });
-            </script> -->
+            <i><a href="{{ post.paperurl }}" rel="permalink">{{ post.venue }}</a></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.
+
           {% elsif post.pubsource == 'proceeding' %}
             <i><a href="{{ post.paperurl }}" rel="permalink">{{ post.venue }}</a></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.  
-            <!-- <button class="collapsible">bib</button>
-            <div class="content">
-                {{ post.biblio }}
-            </div>
-        
-            <script>
-                // JavaScript to toggle the collapsible content
-                const button = document.querySelector(".collapsible");
-                const content = document.querySelector(".content");
-        
-                button.addEventListener("click", function () {
-                    content.style.display = content.style.display === "block" ? "none" : "block";
-                });
-            </script> -->
-          {% endif %}
-            <!-- <button class="collapsible">bib</button>
-            <div class="content">
-              {{ post.biblio }}
-            </div>
-        
-            <script>
-                // JavaScript to toggle the collapsible content
-                const button = document.querySelector(".collapsible");
-                const content = document.querySelector(".content");
-        
-                button.addEventListener("click", function () {
-                    content.style.display = content.style.display === "block" ? "none" : "block";
-                });
-            </script> -->
-            <!-- <details>
-              <summary><i style="background-color: #504545; color: #ffffff; cursor: pointer; padding: 5px; width: auto;  text-align: left; border: none; outline: none; border-radius: 5px;">bib</i></summary>
-              {{ post.biblio }}
-            </details> -->
-          </p>
-    {% elsif post.date %}
-              <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+
           {% endif %}
 
-
-    <!-- {% if post.excerpt and site.read_more != 'enabled' %}
-    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
-    {% elsif post.excerpt and site.read_more == 'enabled' %}
-    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
-    {% endif %} -->
-    
-    <!-- {% if post.citation and post.paperurl %}
-      <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
-    {% elsif post.citation %}
-      <p>Recommended citation: {{ post.citation }} </p>
-    {% elsif post.paperurl %}
-      <p>Download <a href=" {{ post.paperurl }} "><u>here</u></a></p>
-    {% endif %} -->
-  </div>
-</div>
+          </p> 
+          {% elsif post.date %}
+            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+            {% endif %}  
+          </div>
+        </div>
   </article>
 </div>
+
+
