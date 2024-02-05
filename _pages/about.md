@@ -8,7 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-Postdoctoral researcher at [EPFL](https://www.epfl.ch/) (École Polytechnique Fédérale de Lausanne) in the [MCSS](https://www.epfl.ch/labs/mcss/) group of Prof. [Jan S. Hesthaven](https://www.epfl.ch/labs/mcss/members/hesthaven/).  
+Assistant Professor (RtdA) at [SISSA](https://www.math.sissa.it/content/mathematical-analysis-modelling-and-applications-0) (International School for Advanced Studies).\
+Member of the [mathLab](https://mathlab.sissa.it) group.
 
 ### Bio
 Ph.D. in [Mathematical Analysis, Modelling and Applications](https://www.math.sissa.it/content/mathematical-analysis-modelling-and-applications-0)  

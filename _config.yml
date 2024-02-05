@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Federico Pichi"
 title_separator          : "-"
 name                     : &name "Federico Pichi"
-description              : &description "Postdoctoral researcher"
+description              : &description "Assistant Professor"
 url                      : https://fpichi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "fpichi/fpichi.github.io"
@@ -83,11 +83,11 @@ author:
   name             : "Federico Pichi"
   avatar           : "profile.png"
   bio              : "Ph.D. in Mathematical Analysis, Modelling and Applications"
-  location         : "MCSS, MA C2 595"
-  employer         : "EPFL, Lausanne"
+  location         : "mathLab, room 712"
+  employer         : "SISSA, Trieste"
   pubmed           :
   googlescholar    : "https://scholar.google.it/citations?user=UYUZOlkAAAAJ&hl=it"
-  email            : "federico.pichi@sissa.it, federico.pichi@epfl.ch"
+  email            : "federico.pichi@sissa.it, fpichi@sissa.it"
   researchgate     : "https://www.researchgate.net/profile/Federico_Pichi"
   uri              :
   bitbucket        :
