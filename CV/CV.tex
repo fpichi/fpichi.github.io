@@ -18,11 +18,16 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{scrartcl}
+% \documentclass{scrartcl}
+\documentclass[
+  usegeometry% <- add this option
+]{scrartcl}
 
 \reversemarginpar % Move the margin to the left of the page 
 
 \newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[right=3cm]{geometry}
 
 \usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
 \usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
@@ -110,29 +115,32 @@ Numerical analysis of bifurcating phenomena held by parametrised non-linear equa
 
 \spacedlowsmallcaps{Publications}\vspace{1em}
 
-\NewEntry{\underline{In preparation}}{}
+% \NewEntry{\underline{In preparation}}{}
 
-\Description{\MarginText{[21]}O. \textsc{Morrison}, ~F. \textsc{Pichi}, ~J~S. \textsc{Hesthaven.}  {\color{blue} ``GFN: A Graph Feedforward Network for resolution-invariant reduced operator learning in multi-fidelity applications".}}
 
-\Description{\MarginText{[20]}M. \textsc{Hirsch}, ~F. \textsc{Pichi}, , ~J~S. \textsc{Hesthaven.} {\color{blue} ``Neural Empirical Interpolation Method for Nonlinear Model Reduction".}}
+% \Description{\MarginText{[19]}F. \textsc{Pichi}, ~M. \textsc{Strazzullo.} {\color{blue} ``A deflation-based certified greedy algorithm for bifurcating nonlinear {PDE}s".}}
 
-\Description{\MarginText{[19]}F. \textsc{Pichi}, ~M. \textsc{Strazzullo.} {\color{blue} ``A deflation-based certified greedy algorithm for bifurcating nonlinear {PDE}s".}}
-
-\Description{\MarginText{[18]}F. \textsc{Ballarin}, ~F. \textsc{Pichi}, ~G. \textsc{Rozza.} {\color{blue} ``A successive partition method for the efficient evaluation of parametrized stability factors".}}
+% \Description{\MarginText{[18]}F. \textsc{Ballarin}, ~F. \textsc{Pichi}, ~G. \textsc{Rozza.} {\color{blue} ``A successive partition method for the efficient evaluation of parametrized stability factors".}}
 
 
 \NewEntry{\underline{Preprint}}{}
 
+
+\Description{\MarginText{[19]}O. \textsc{Morrison}, ~F. \textsc{Pichi}, ~J~S. \textsc{Hesthaven.}  {\color{blue} ``GFN: A Graph Feedforward Network for resolution-invariant reduced operator learning in multi-fidelity applications".} \href{http://arxiv.org/abs/2406.03569}{ arXiv:2406.03569.}}
+
+\Description{\MarginText{[18]}M. \textsc{Hirsch}, ~F. \textsc{Pichi}, ~J~S. \textsc{Hesthaven.} {\color{blue} ``Neural Empirical Interpolation Method for Nonlinear Model Reduction".} \href{http://arxiv.org/abs/2406.03562}{ arXiv:2406.03562.}}
+
 \Description{\MarginText{[17]}I.~C. \textsc{Gonnella}, ~M. \textsc{Khamlich}, ~F. \textsc{Pichi}, ~G. \textsc{Rozza.} {\color{blue} ``A stochastic perturbation approach to nonlinear bifurcating problems".} \href{https://arxiv.org/abs/2402.16803}{ arXiv:2402.16803.}}
 
-\Description{\MarginText{[16]}G. \textsc{Rozza}, ~F. \textsc{Ballarin}, ~L. \textsc{Scandurra}, ~F. \textsc{Pichi.} {\color{blue} ``Real time reduced order computational mechanics: parametric PDEs worked out problems".} Book accepted in \textit{SISSA Springer Series}.}
 
-\Description{\MarginText{[15]}M. \textsc{Khamlich}, ~F. \textsc{Pichi}, ~G. \textsc{Rozza.} {\color{blue} ``Optimal Transport-inspired Deep Learning Framework for Slow-Decaying Problems: Exploiting Sinkhorn Loss and Wasserstein Kernel".} \href{https://arxiv.org/abs/2308.13840}{ arXiv:2308.13840.}}
+\Description{\MarginText{[16]}M. \textsc{Khamlich}, ~F. \textsc{Pichi}, ~G. \textsc{Rozza.} {\color{blue} ``Optimal Transport-inspired Deep Learning Framework for Slow-Decaying Problems: Exploiting Sinkhorn Loss and Wasserstein Kernel".} \href{https://arxiv.org/abs/2308.13840}{ arXiv:2308.13840.}}
 
-\Description{\MarginText{[14]}F. \textsc{Pichi}, ~G. \textsc{Rozza.} {\color{blue} ``Reduced Order Models for the Buckling of Hyperelastic Beams".} \href{https://arxiv.org/abs/2305.19764}{ arXiv:2305.19764.} Accepted in \textit{Lecture notes in CSE, Springer}.}
+\Description{\MarginText{[15]}F. \textsc{Pichi}, ~G. \textsc{Rozza.} {\color{blue} ``Reduced Order Models for the Buckling of Hyperelastic Beams".} \href{https://arxiv.org/abs/2305.19764}{ arXiv:2305.19764.} Accepted in \textit{Lecture notes in CSE, Springer}.}
 
 
 \NewEntry{\underline{Published}}{}
+
+\Description{\MarginText{[14]}G. \textsc{Rozza}, ~F. \textsc{Ballarin}, ~L. \textsc{Scandurra}, ~F. \textsc{Pichi.} {\color{blue} ``Real time reduced order computational mechanics: parametric PDEs worked out problems".} \href{https://doi.org/10.1007/978-3-031-49892-3}{\textit{Springer Nature Switzerland, SISSA Springer Series}, 10.1007/978-3-031-49892-3, 2024}.}
 
 \Description{\MarginText{[13]}F. \textsc{Pichi}, ~B. \textsc{Moya}, ~J.~S. \textsc{Hesthaven.} {\color{blue} ``A convolutional graph neural network approach to model order reduction to non-linear parametrized PDEs".} \href{https://www.sciencedirect.com/science/article/pii/S0021999124000111}{Journal of Computational Physics, 2024}.}
 
@@ -260,6 +268,8 @@ Final Grading \ \ \textit{110/110 cum laude}}
 
 \Description{\MarginText{Teaching and \\Tasks}{\color{cyan} Courses} 
 \begin{itemize} 
+    \item[$\circ$] \emph{Reduced Order Methods for Computational Mechanics} [TA], SISSA, 2024.
+    \item[$\circ$] \emph{Topics in Computational Fluid Dynamics} [TA], SISSA, 2024.
     \item[$\circ$] \emph{Analyse III} [TA], EPFL, 2023.
     \item[$\circ$] \emph{Analyse III} [TA], EPFL, 2022.
     \item[$\circ$] \emph{Summer School on Reduced Order Methods in Computational Fluid Dynamics}. Invited lecturer, SISSA, 2022.
@@ -271,32 +281,38 @@ Final Grading \ \ \textit{110/110 cum laude}}
 \vspace{-0.5em}
 
 \Description{{\color{cyan} Tutoring}
+% \begin{itemize}
+%     \item[$\circ$] {\color{NavyBlue}Internship} and {\color{PineGreen}Master}\ \ $\cdotp$\ \  L.\ Tomada, Mathematics, Univ. of Trieste, 2024.
+%     \item[$\circ$] {\color{BrickRed}Ph.D.}\ \ $\cdotp$\ \  A.\ Orunnukaran, Mathematics, SISSA, 2023.
+%     \item[$\circ$] {\color{NavyBlue}Semester}\ \ $\cdotp$\ \  F.\ Sala, Comp.\ Science and Eng., EPFL, 2023.
+%     \item[$\circ$] {\color{NavyBlue}Semester}\ \ $\cdotp$\ \  L.\ Trentini, Comp.\ Science and Eng., EPFL, 2023.
+%     \item[$\circ$] {\color{NavyBlue}Semester} and {\color{PineGreen}Master}\ \ $\cdotp$\ \  O.\ Morrison, Mathematics, EPFL, 2023.
+%     \item[$\circ$] {\color{PineGreen}Master} and {\color{BrickRed}Ph.D.}\ \ $\cdotp$\ \  I.C.\ Gonnella, Data Science, Univ. of Trieste, 2023.
+%     \item[$\circ$] {\color{NavyBlue}Semester}\ \ $\cdotp$\ \  F.\ Pettenon, Mathematics, EPFL, 2023.
+%     \item[$\circ$] {\color{NavyBlue}Semester} \ \ $\cdotp$\ \ HaPINNess project, Machine Learning course CS433, EPFL, 2023.
+%     \item[$\circ$] {\color{NavyBlue}Internship}\ \ $\cdotp$\ \ M.\ Hirsch, Math. Sciences, Carnegie Mellon University, 2022.
+%     \item[$\circ$] {\color{PineGreen}Master} and {\color{BrickRed}Ph.D.}\ \ $\cdotp$\ \  M.\ Khamlich, Math.\ Eng., Politecnico di Milano, 2021.
+%     \item[$\circ$] {\color{PineGreen}Master}\ \ $\cdotp$\ \  M.\ Pintore, Math.\ Eng., Politecnico di Torino, 2019.
+% \end{itemize}
 \begin{itemize}
-    \item[$\circ$] {\color{NavyBlue}Internship} and {\color{PineGreen}Master}\ \ $\cdotp$\ \  L.\ Tomada, Mathematics, Univ. of Trieste, 2024.
-    \item[$\circ$] {\color{BrickRed}Ph.D.}\ \ $\cdotp$\ \  A.\ Orunnukaran, Mathematics, SISSA, 2023.
-    \item[$\circ$] {\color{NavyBlue}Semester}\ \ $\cdotp$\ \  F.\ Sala, Comp.\ Science and Eng., EPFL, 2023.
-    \item[$\circ$] {\color{NavyBlue}Semester}\ \ $\cdotp$\ \  L.\ Trentini, Comp.\ Science and Eng., EPFL, 2023.
-    \item[$\circ$] {\color{NavyBlue}Semester} and {\color{PineGreen}Master}\ \ $\cdotp$\ \  O.\ Morrison, Mathematics, EPFL, 2023.
-    \item[$\circ$] {\color{PineGreen}Master} and {\color{BrickRed}Ph.D.}\ \ $\cdotp$\ \  I.C.\ Gonnella, Data Science, Univ. of Trieste, 2023.
-    \item[$\circ$] {\color{NavyBlue}Semester}\ \ $\cdotp$\ \  F.\ Pettenon, Mathematics, EPFL, 2023.
-    \item[$\circ$] {\color{NavyBlue}Semester} \ \ $\cdotp$\ \ HaPINNess project, Machine Learning course CS433, EPFL, 2023.
-    \item[$\circ$] {\color{NavyBlue}Internship}\ \ $\cdotp$\ \ M.\ Hirsch, Math. Sciences, Carnegie Mellon University, 2022.
-    \item[$\circ$] {\color{PineGreen}Master} and {\color{BrickRed}Ph.D.}\ \ $\cdotp$\ \  M.\ Khamlich, Math.\ Eng., Politecnico di Milano, 2021.
-    \item[$\circ$] {\color{PineGreen}Master}\ \ $\cdotp$\ \  M.\ Pintore, Math.\ Eng., Politecnico di Torino, 2019.
-    % \item[$\circ$] Internship project of Max Hirsch, \emph{Physics informed reduced order models: reinforced neural networks for non-intrusive reduction.} Bachelor/Master degree in Mathematical Sciences, Carnegie Mellon University, Pennsylvania, (May 2022).
-    % \item[$\circ$] Master thesis of Moaad Khamlich, \emph{Reduced order models for bifurcating phenomena in Fluid-Structure Interaction problems}. Master degree in Mathematical Engineering, Politecnico di Milano, Italy,  (Apr. 2021).
-    % \item[$\circ$] Master thesis of Moreno Pintore, \emph{Efficient Computation of Bifurcation Diagrams with Spectral Element Method and Reduced Order Models}. Master degree in Mathematical Engineering, Politecnico di Torino, Italy, (Oct. 2019).
+    \item[$\circ$] {\color{BrickRed}Ph.D.} [3]\ \ $\cdotp$\ \ \textit{ M.\ Khamlich} (SISSA), \textit{A.\ Orunnukaran} (SISSA),  \textit{I.C.\ Gonnella} (SISSA)
+    \item[$\circ$] {\color{orange}Project} [3]\ \ $\cdotp$\ \  \textit{A.\ Kabalan} (SISSA), \textit{C.\ Valentino} (UniSa), \textit{B.\ Moya} (Univ.\ of Zaragoza).
+    \item[$\circ$] {\color{PineGreen}Master} [6]\ \ $\cdotp$\ \  \textit{L.\ Tomada} (Univ.\ of Trieste), \textit{A.\ Tataranni} (PoliTo), \textit{I.C.\ Gonnella} (Univ.\ of Trieste), \textit{O.\ Morrison} (EPFL), \textit{M.\ Khamlich} (PoliMi), \textit{M.\ Pintore} (PoliTo).
+    \item[$\circ$] {\color{NavyBlue}Internship} [8]\ \ $\cdotp$\ \  L\textit{.\ Tomada} (Univ.\ of Trieste), \textit{F.\ Sala} (EPFL), \textit{L.\ Trentini} (EPFL), \textit{O.\ Morrison} (EPFL, \textbf{IBM Prize}), \textit{A.\ Radakovic} (SISSA), \textit{J.\ Manson} (EPFL), \textit{F.\ Pettenon} (EPFL), \textit{M. Hirsch} (Carnegie Mellon University).
 \end{itemize}}
 \vspace{-0.5em}
 
 \newpage
 \Description{{\color{cyan} Miscellanea}
 \begin{itemize}
+    \item[$\circ$] Research invitations [3]: TU/e Eindhoven (K.\ Lux-Gottschalk), Inria Sophia Antipolis (S.\ Lanteri), Politecnico di Torino (M. Strazzullo).
+    \item[$\circ$] Organizer conferences  [1]: SMLET - \textit{Scientific Machine Learning: emerging topics}.
+    \item[$\circ$] Organizer mini-symposia [2]: WCCM 2024, ECCOMAS 2024.
+    \item[$\circ$] Reviewer [19]: \href{https://onlinelibrary.wiley.com/journal/10970207}{ International Journal for Numerical Methods in Engineering}, \href{https://www.sciencedirect.com/journal/results-in-engineering}{Results in Engineering}, \href{https://ascelibrary.org/journal/jaeeez}{Journal of Aerospace Engineering}, \href{https://sisc.siam.org}{SIAM Journal on Scientific Computing}, \href{https://www.springer.com/journal/10444}{Advances in Computational Mathematics}, \href{https://www.springer.com/journal/10915}{Journal of Scientific Computing}, \href{https://www.sciencedirect.com/journal/finite-elements-in-analysis-and-design}{Finite Elements in Analysis and Design}, \href{https://www.worldscientific.com/worldscinet/ijbc}{International Journal of Bifurcation and Chaos}, \href{http://www.ams.org/publications/math-reviews/math-reviews}{AMS Math. Reviews}, \href{https://advancesindifferenceequations.springeropen.com}{Advances in Continuous and Discrete Models}, \href{https://www.sciencedirect.com/journal/applied-mathematics-and-computation}{Applied Mathematics and Computation}, \href{https://www.sciencedirect.com/journal/computers-and-mathematics-with-applications}{Computers \& Mathematics with Applications}, \href{https://www.sciencedirect.com/journal/journal-of-computational-physics}{Journal of Computational Physics}, \href{https://www.sciencedirect.com/journal/communications-in-nonlinear-science-and-numerical-simulation}{Communications in Nonlinear Science and Numerical Simulation}, \href{https://www.sciencedirect.com/journal/applied-mathematical-modelling}{Applied Mathematical Modelling}, \href{https://www.sciencedirect.com/journal/computer-methods-in-applied-mechanics-and-engineering}{Computer Methods in Applied Mechanics and Engineering}, \href{https://pubs.aip.org/aip/cha}{Chaos}, \href{https://amses-journal.springeropen.com}{Advanced Modeling and Simulation in Engineering Sciences}, \href{https://www.sciencedirect.com/journal/physica-d-nonlinear-phenomena}{Physica D: Nonlinear Phenomena}.
     \item[$\circ$] Member of \href{https://www.altamatematica.it/gncs/}{GNCS}, \href{https://www.simai.eu}{SIMAI}, \href{https://www.siam.org}{SIAM}.
     \item[$\circ$] President of \href{http://www.math.sissa.it/content/sissa-siam-student-chapter}{SISSA Siam Student Chapter (2019-2020)}.
     \item[$\circ$] Organizer of \href{https://www.math.sissa.it/seminar/siam-chapter-colloquia-2020}{SISSA SIAM Student Chapter Colloquia 2020, Virtual Event}.
     \item[$\circ$] Webmaster of \href{https://www.math.sissa.it/content/mathematical-analysis-modelling-and-applications-0}{SISSA Mathematics Area (2018-2020)}.
-    \item[$\circ$] Reviewer (19 journals): \href{https://onlinelibrary.wiley.com/journal/10970207}{ International Journal for Numerical Methods in Engineering}, \href{https://www.sciencedirect.com/journal/results-in-engineering}{Results in Engineering}, \href{https://ascelibrary.org/journal/jaeeez}{Journal of Aerospace Engineering}, \href{https://sisc.siam.org}{SIAM Journal on Scientific Computing}, \href{https://www.springer.com/journal/10444}{Advances in Computational Mathematics}, \href{https://www.springer.com/journal/10915}{Journal of Scientific Computing}, \href{https://www.sciencedirect.com/journal/finite-elements-in-analysis-and-design}{Finite Elements in Analysis and Design}, \href{https://www.worldscientific.com/worldscinet/ijbc}{International Journal of Bifurcation and Chaos}, \href{http://www.ams.org/publications/math-reviews/math-reviews}{AMS Math. Reviews}, \href{https://advancesindifferenceequations.springeropen.com}{Advances in Continuous and Discrete Models}, \href{https://www.sciencedirect.com/journal/applied-mathematics-and-computation}{Applied Mathematics and Computation}, \href{https://www.sciencedirect.com/journal/computers-and-mathematics-with-applications}{Computers \& Mathematics with Applications}, \href{https://www.sciencedirect.com/journal/journal-of-computational-physics}{Journal of Computational Physics}, \href{https://www.sciencedirect.com/journal/communications-in-nonlinear-science-and-numerical-simulation}{Communications in Nonlinear Science and Numerical Simulation}, \href{https://www.sciencedirect.com/journal/applied-mathematical-modelling}{Applied Mathematical Modelling}, \href{https://www.sciencedirect.com/journal/computer-methods-in-applied-mechanics-and-engineering}{Computer Methods in Applied Mechanics and Engineering}, \href{https://pubs.aip.org/aip/cha}{Chaos}, \href{https://amses-journal.springeropen.com}{Advanced Modeling and Simulation in Engineering Sciences}, \href{https://www.sciencedirect.com/journal/physica-d-nonlinear-phenomena}{Physica D: Nonlinear Phenomena}.
 \end{itemize}}
 %------------------------------------------------
 
@@ -304,7 +320,13 @@ Final Grading \ \ \textit{110/110 cum laude}}
 
 % \newpage
 
-\Description{\MarginText{Awards and Funding}{\color{violet}2021 CRUI project GO for IT}\ \ $\cdotp$\ \  Research grant between EPFL and SISSA: "Reduced order methods for nonlinear PDEs enhanced by machine learning"}
+\Description{\MarginText{Awards and Funding}{\color{violet}2024 iNEST Young Researcher}\ \ $\cdotp$\ \  "Surrogate Models for Scientific
+Machine Learning", iNEST-Interconnected Nord-Est Innovation
+Ecosystem (50K)}
+
+\vspace{-0.5em} 
+
+\Description{{\color{violet}2021 CRUI project GO for IT}\ \ $\cdotp$\ \  Research grant between EPFL and SISSA: "Reduced order methods for nonlinear PDEs enhanced by machine learning"}
 
 \vspace{-0.5em} 
 
@@ -328,7 +350,7 @@ Final Grading \ \ \textit{110/110 cum laude}}
 
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
-\Description{{\color{violet}2018 MIT-Italy - FVG}\ \ $\cdotp$\ \  ROM2S Reduced Order Methods at MIT and SISSA}
+\Description{{\color{violet}2018 MIT-Italy - FVG}\ \ $\cdotp$\ \  ``ROM2S - Reduced Models at MIT and SISSA" (10K)}
 
 \vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
 
@@ -354,7 +376,7 @@ Final Grading \ \ \textit{110/110 cum laude}}
 
 \vspace{1em}
 
-\Description{\MarginText{Conferences \\ and \\ Workshops}{\color{orange}ECM 2024 \href{https://www.ecm2024sevilla.com}{(talk)}}, {\color{orange}SciML 2024 \href{https://irma.math.unistra.fr/~micheldansac/SciML2024/}{(talk)}}, {\color{orange}ECCOMAS 2024 \href{https://eccomas2024.org}{(talk)}}, {\color{orange}SIAM UQ 2024 \href{https://www.siam.org/conferences/cm/program/program-and-abstracts/uq24-program-abstracts}{(talk)}}, {\color{orange}@INRIA 2024 \href{http://www-sop.inria.fr/atlantis/}{(talk)}}, {\color{orange}@DISMA 2023 \href{https://sites.google.com/view/seminarinumericadisma/home}{(talk)}}, {\color{orange}@ROMA 2023 \href{https://www.mat.uniroma1.it/ricerca/seminari}{(talk)}}, {\color{orange}YIC 2023 \href{https://yic2023.fe.up.pt/459-2/}{(talk)}}, {\color{orange}IWROMS 2023 \href{https://ims.nus.edu.sg/events/international-workshop-on-reduced-order-methods/}{(talk)}}, {\color{orange}CFC 2023 \href{https://cfc2023.iacm.info/event/session/534865b0-a5fd-11ed-b019-000c29ddfc0c}{(talk)}}, {\color{orange}NA G-ROM \href{https://na-g-roms.github.io/seminars/Federico_Pichi_2023.html}{(talk)}}, {\color{orange}SIAM CSE 2023 \href{https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75595}{(talk)}}, {\color{orange}CODES@Emory 2022 \href{https://www.math.emory.edu/events/seminars/all/}{(talk)}}, {\color{orange}MORE 2022 \href{https://more.sciencesconf.org}{(talk)}}, {\color{orange}ROM in CFD 2022 \href{https://indico.sissa.it/event/74/}{(talk)}}, {\color{orange}ECCOMAS 2022 \href{https://www.eccomas2022.org/frontal/default.asp}{(talk)}}, {\color{orange}RAMSES 2021 \href{https://indico.sissa.it/event/43/attachments/271/407/abstracts_list.pdf}{(talk)}},
+\Description{\MarginText{Conferences \\ and \\ Workshops}{Talks [31]: \color{orange}ECM 2024 \href{https://www.ecm2024sevilla.com}{(talk)}}, {\color{orange}SciML 2024 \href{https://irma.math.unistra.fr/~micheldansac/SciML2024/}{(talk)}}, {\color{orange}SMLET 2024 \href{https://indico.sissa.it/event/107/page/236-programme-at-a-glance}{(talk)}}, {\color{orange}@TU/e 2024 \href{https://casa.win.tue.nl/home/event/colloquium-federico-pichi-sissa-trieste/}{(talk)}},  {\color{orange}ECCOMAS 2024 \href{https://eccomas2024.org}{(talk)}}, {\color{orange}SIAM UQ 2024 \href{https://www.siam.org/conferences/cm/program/program-and-abstracts/uq24-program-abstracts}{(talk)}}, {\color{orange}@INRIA 2024 \href{http://www-sop.inria.fr/atlantis/}{(talk)}}, {\color{orange}@DISMA 2023 \href{https://sites.google.com/view/seminarinumericadisma/home}{(talk)}}, {\color{orange}@ROMA 2023 \href{https://www.mat.uniroma1.it/ricerca/seminari}{(talk)}}, {\color{orange}YIC 2023 \href{https://yic2023.fe.up.pt/459-2/}{(talk)}}, {\color{orange}IWROMS 2023 \href{https://ims.nus.edu.sg/events/international-workshop-on-reduced-order-methods/}{(talk)}}, {\color{orange}CFC 2023 \href{https://cfc2023.iacm.info/event/session/534865b0-a5fd-11ed-b019-000c29ddfc0c}{(talk)}}, {\color{orange}NA G-ROM \href{https://na-g-roms.github.io/seminars/Federico_Pichi_2023.html}{(talk)}}, {\color{orange}SIAM CSE 2023 \href{https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=75595}{(talk)}}, {\color{orange}CODES@Emory 2022 \href{https://www.math.emory.edu/events/seminars/all/}{(talk)}}, {\color{orange}MORE 2022 \href{https://more.sciencesconf.org}{(talk)}}, {\color{orange}ROM in CFD 2022 \href{https://indico.sissa.it/event/74/}{(talk)}}, {\color{orange}ECCOMAS 2022 \href{https://www.eccomas2022.org/frontal/default.asp}{(talk)}}, {\color{orange}RAMSES 2021 \href{https://indico.sissa.it/event/43/attachments/271/407/abstracts_list.pdf}{(talk)}},
 {\color{orange}MMLDT-CSET 2021 \href{https://www.morressier.com/session/612f6735bc9810372410079f?poster-id=612f6735bc981037241007a2}{(talk)}}, {\color{orange}CIME Summer School 2021 \href{http://web.math.unifi.it/users/cime}{(talk)}}, {\color{orange}Coupled 2021 \href{https://coupled2021.cimne.com/technical_program}{(talk)}}, {\color{orange}FEniCS 2021 \href{https://fenics2021.com/talks/pichi.html}{(talk)}},  {\color{orange}SIAM CSE 2021 \href{https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=69882}{(talk)}},
 {\color{orange}WCCM-ECCOMAS 2020 \href{https://www.wccm-eccomas2020.org/frontal/default.asp}{(talk)}}, {\color{orange}MORSS 2020 \href{https://morss2020.epfl.ch/wp-content/uploads/2020/08/MORSS2020_schedule.pdf}{(talk)}}, {\color{orange}SAMM 2020 \href{https://indico.mpi-magdeburg.mpg.de/event/7/contributions/181/}{(poster)}}, {\color{orange}UMI 2019 \href{http://umi.dm.unibo.it/congresso2019/programma/sezioni-speciali/s13-metodi-numerici-per-le-equazioni-alle-derivate-parziali/s13-venerdi-6-settembre/}{(talk)}}, {\color{orange}ICIAM 2019 \href{https://iciam2019.org/index.php/scientific-program/program}{(talk)}}, {\color{orange}ROM in CFD \href{https://www.researchgate.net/publication/334598670_Reduced_basis_methods_for_parametric_bifurcation_problems_in_nonlinear_PDEs}{(poster)}}, {\color{orange}CIME-EMS Summer School}, {\color{orange}ICOSAHOM 2018 \href{https://ssl.linklings.net/conferences/icosahom/icosahom2018_program/views/by_area.html\#ptrack136}{(talk)}}, {\color{orange}MoRePaS 2018 \href{https://www.scienceopen.com/document?vid=75ea1d95-ffa8-4f0a-8716-625a55a28fe5}{(poster)}}, {\color{orange}QUIET 2017},  {\color{orange}FEF 2017}, {\color{orange}EU-MORNET}. 
 }
