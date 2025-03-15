@@ -28,21 +28,21 @@ import re
 # todo: incorporate different collection types rather than a catch all publications, requires other changes to template
 publist = {
     "proceeding": {
-        "file": "references.bib",
+        "file": "refs.bib",
         "venuekey": "booktitle",
         "venue-pretext": "In the proceedings of ",
         "collection": {"name": "publications",
                        "permalink": "/publication/"}
     },
     "journal": {
-        "file": "references.bib",
+        "file": "refs.bib",
         "venuekey": "journal",
         "venue-pretext": "",
         "collection": {"name": "publications",
                        "permalink": "/publication/"}
     },
     "unpublished": {
-        "file": "references.bib",
+        "file": "refs.bib",
         "venuekey": "note",
         "venue-pretext": "",
         "collection": {"name": "publications",
@@ -60,7 +60,7 @@ def html_escape(text):
     """Produce entities within text."""
     return "".join(html_escape_table.get(c, c) for c in text)
 
-pub_day_list = [str(i) for i in range(10, 32)]
+pub_day_list = [str(i) for i in range(1, 32)]
 item = 1
 for pubsource in publist:
     print("")

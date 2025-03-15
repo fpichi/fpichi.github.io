@@ -1,0 +1,192 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname doi\endcsname\relax
+  \def\doi#1{\burlalt{doi:#1}{http://dx.doi.org/#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2}\fi
+\expandafter\ifx\csname burlalt\endcsname\relax
+  \def\burlalt#1#2{\href{#2}{#1}}\fi
+
+\bibitem{KhamlichOptimalTransportBasedDisplacement2024}
+M.~Khamlich, F.~Pichi, M.~Girfoglio, A.~Quaini, and G.~Rozza.
+\newblock Optimal {{Transport-Based Displacement Interpolation}} with {{Data
+  Augmentation}} for {{Reduced Order Modeling}} of {{Nonlinear Dynamical
+  Systems}}.
+\newblock arXiv:2411.08750, 2024,
+  \burlalt{2411.08750}{http://arxiv.org/abs/2411.08750}.
+\newblock \doi{10.48550/arXiv.2411.08750}.
+
+\bibitem{RathoreProjectionbasedReducedOrder2024}
+S.~Rathore, P.~C. Africa, F.~Ballarin, F.~Pichi, M.~Girfoglio, and G.~Rozza.
+\newblock Projection-based {{Reduced Order Modelling}} for {{Unsteady
+  Parametrized Optimal Control Problems}} in {{3D Cardiovascular Flows}}.
+\newblock arXiv:2410.20828, 2024,
+  \burlalt{2410.20828}{http://arxiv.org/abs/2410.20828}.
+\newblock \doi{10.48550/arXiv.2410.20828}.
+
+\bibitem{GonnellaStochasticPerturbationApproach2024}
+I.~C. Gonnella, M.~Khamlich, F.~Pichi, and G.~Rozza.
+\newblock A stochastic perturbation approach to nonlinear bifurcating problems.
+\newblock arXiv:2402.16803, 2024,
+  \burlalt{2402.16803}{http://arxiv.org/abs/2402.16803}.
+\newblock \doi{10.48550/arXiv.2402.16803}.
+
+\bibitem{HirschNeuralEmpiricalInterpolation2024}
+M.~Hirsch, F.~Pichi, and J.~S. Hesthaven.
+\newblock Neural empirical interpolation method for nonlinear model reduction.
+\newblock arXiv:2406.03562, 2024,
+  \burlalt{2406.03562}{http://arxiv.org/abs/2406.03562}.
+
+\bibitem{GonnellaNonlinearReductionStrategies2025}
+I.~C. Gonnella, F.~Pichi, and G.~Rozza.
+\newblock Nonlinear reduction strategies for data compression: A comprehensive
+  comparison from diffusion to advection problems.
+\newblock arXiv:2501.12816, 2025,
+  \burlalt{2501.12816}{http://arxiv.org/abs/2501.12816}.
+\newblock \doi{10.48550/arXiv.2501.12816}.
+
+\bibitem{TomadaSparseIdentificationBifurcating2025}
+L.~Tomada, M.~Khamlich, F.~Pichi, and G.~Rozza.
+\newblock Sparse {{Identification}} for bifurcating phenomena in
+  {{Computational Fluid Dynamics}}.
+\newblock arXiv:2502.11194, 2025,
+  \burlalt{2502.11194}{http://arxiv.org/abs/2502.11194}.
+\newblock \doi{10.48550/arXiv.2502.11194}.
+
+\bibitem{PichiDeflationbasedCertifiedGreedy2025}
+F.~Pichi and M.~Strazzullo.
+\newblock Deflation-based certified greedy algorithm and adaptivity for
+  bifurcating nonlinear {{PDEs}}.
+\newblock arXiv:2501.12361, 2025,
+  \burlalt{2501.12361}{http://arxiv.org/abs/2501.12361}.
+\newblock \doi{10.48550/arXiv.2501.12361}.
+
+\bibitem{pichirozza}
+F.~Pichi and G.~Rozza.
+\newblock Reduced basis approaches for parametrized bifurcation problems held
+  by non-linear {V}on {Karman} equations.
+\newblock {\em Journal of Scientific Computing}, 81(1):112--135, 2019.
+\newblock \doi{10.1007/s10915-019-01003-3}.
+
+\bibitem{pichiquaini}
+F.~Pichi, A.~Quaini, and G.~Rozza.
+\newblock A reduced order modeling technique to study bifurcating phenomena:
+  Application to the {G}ross-{P}itaevskii equation.
+\newblock {\em SIAM Journal on Scientific Computing}, 42(5):B1115--B1135, 2020.
+\newblock \doi{10.1137/20M1313106}.
+
+\bibitem{pintore2019efficient}
+M.~Pintore, F.~Pichi, M.~Hess, G.~Rozza, and C.~Canuto.
+\newblock Efficient computation of bifurcation diagrams with a deflated
+  approach to reduced basis spectral element method.
+\newblock {\em Advances in Computational Mathematics}, 47(1), 2020.
+\newblock \doi{10.1007/s10444-020-09827-6}.
+
+\bibitem{PichiDrivingBifurcatingParametrized2022}
+F.~Pichi, M.~Strazzullo, F.~Ballarin, and G.~Rozza.
+\newblock Driving bifurcating parametrized nonlinear {{PDEs}} by optimal
+  control strategies: Application to {{Navier-Stokes}} equations with model
+  order reduction.
+\newblock {\em ESAIM: Mathematical Modelling and Numerical Analysis}, 2022.
+\newblock \doi{10.1051/m2an/2022044}.
+
+\bibitem{pichi_phd}
+F.~Pichi.
+\newblock {\em Reduced order models for parametric bifurcation problems in
+  nonlinear {PDE}s}.
+\newblock PhD thesis, Scuola Internazionale Superiore di Studi Avanzati, 2020.
+
+\bibitem{KhamlichModelOrderReduction2022}
+M.~Khamlich, F.~Pichi, and G.~Rozza.
+\newblock Model order reduction for bifurcating phenomena in {{Fluid-Structure
+  Interaction}} problems.
+\newblock {\em International Journal for Numerical Methods in Fluids}, 2022.
+\newblock \doi{10.1002/fld.5118}.
+
+\bibitem{PichiArtificialNeuralNetwork2023}
+F.~Pichi, F.~Ballarin, G.~Rozza, and J.~S. Hesthaven.
+\newblock An artificial neural network approach to bifurcating phenomena in
+  computational fluid dynamics.
+\newblock {\em Computers \& Fluids}, 254:105813, 2023.
+\newblock \doi{10.1016/j.compfluid.2023.105813}.
+
+\bibitem{PichiGraphConvolutionalAutoencoder2024}
+F.~Pichi, B.~Moya, and J.~S. Hesthaven.
+\newblock A graph convolutional autoencoder approach to model order reduction
+  for parametrized {{PDEs}}.
+\newblock {\em Journal of Computational Physics}, 501:112762, 2024.
+\newblock \doi{10.1016/j.jcp.2024.112762}.
+
+\bibitem{RozzaRealTimeReduced2024}
+G.~Rozza, F.~Ballarin, L.~Scandurra, and F.~Pichi.
+\newblock {\em Real {{Time Reduced Order Computational Mechanics}}:
+  {{Parametric PDEs Worked Out Problems}}}, volume~5 of {\em {{SISSA Springer
+  Series}}}.
+\newblock Springer Nature Switzerland, Cham, 2024.
+\newblock \doi{10.1007/978-3-031-49892-3}.
+
+\bibitem{KhamlichOptimalTransportInspired2025}
+M.~Khamlich, F.~Pichi, and G.~Rozza.
+\newblock Optimal {{Transport}}--{{Inspired Deep Learning Framework}} for
+  {{Slow-Decaying Kolmogorov}} n-{{Width Problems}}: {{Exploiting Sinkhorn
+  Loss}} and {{Wasserstein Kernel}}.
+\newblock {\em SIAM Journal on Scientific Computing}, pages C235--C264, 2025.
+\newblock \doi{10.1137/23M1604680}.
+
+\bibitem{MorrisonGFNGraphFeedforward2024a}
+O.~M. Morrison, F.~Pichi, and J.~S. Hesthaven.
+\newblock {{GFN}}: {{A}} graph feedforward network for resolution-invariant
+  reduced operator learning in multifidelity applications.
+\newblock {\em Computer Methods in Applied Mechanics and Engineering},
+  432:117458, 2024.
+\newblock \doi{10.1016/j.cma.2024.117458}.
+
+\bibitem{Huynh2018}
+{\em Reduced Basis Approximation and A Posteriori Error Estimation:
+  Applications to Elasticity Problems in Several Parametric Settings}, Cham,
+  2018. Springer International Publishing.
+\newblock \doi{10.1007/978-3-319-94676-4_8}.
+
+\bibitem{PichiChapterFiniteElementBased2022}
+F.~Pichi, M.~Strazzullo, F.~Ballarin, and G.~Rozza.
+\newblock Chapter 2: {{Finite Element-Based Reduced Basis Method}} in
+  {{Computational Fluid Dynamics}}.
+\newblock In {\em Advanced {{Reduced Order Methods}} and {{Applications}} in
+  {{Computational Fluid Dynamics}}}, Computational {{Science}} \&
+  {{Engineering}}, pages 13--58. {Society for Industrial and Applied
+  Mathematics}, 2022.
+\newblock \doi{10.1137/1.9781611977257.ch2}.
+
+\bibitem{PichiChapterReducedBasis2022}
+F.~Pichi, F.~Ballarin, and G.~Rozza.
+\newblock Chapter 5: {{Reduced Basis Approaches}} to {{Bifurcating Nonlinear
+  Parametrized Partial Differential Equations}}.
+\newblock In {\em Advanced {{Reduced Order Methods}} and {{Applications}} in
+  {{Computational Fluid Dynamics}}}, Computational {{Science}} \&
+  {{Engineering}}, pages 97--123. {Society for Industrial and Applied
+  Mathematics}, 2022.
+\newblock \doi{10.1137/1.9781611977257.ch5}.
+
+\bibitem{KhamlichChapter15Reduced2022}
+M.~Khamlich, F.~Pichi, and G.~Rozza.
+\newblock Chapter 15: {{Reduced Order Models}} for {{Bifurcating Phenomena}} in
+  {{Fluid-Structure Interaction Problems}}.
+\newblock In {\em Advanced {{Reduced Order Methods}} and {{Applications}} in
+  {{Computational Fluid Dynamics}}}, Computational {{Science}} \&
+  {{Engineering}}, pages 311--324. {Society for Industrial and Applied
+  Mathematics}, 2022.
+\newblock \doi{10.1137/1.9781611977257.ch15}.
+
+\bibitem{PichiReducedOrderModels2024}
+F.~Pichi and G.~Rozza.
+\newblock Reduced {{Order Models}} for the {{Buckling}} of {{Hyperelastic
+  Beams}}.
+\newblock In G.~Rozza, G.~Stabile, M.~Gunzburger, and M.~D'Elia, editors, {\em
+  Reduction, {{Approximation}}, {{Machine Learning}}, {{Surrogates}},
+  {{Emulators}} and {{Simulators}}: {{RAMSES}}}, pages 199--240. Springer
+  Nature Switzerland, Cham, 2024.
+\newblock \doi{10.1007/978-3-031-55060-7_9}.
+
+\end{thebibliography}

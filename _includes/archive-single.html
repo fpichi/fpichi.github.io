@@ -89,6 +89,9 @@ clear: both;
           {% elsif post.pubsource == 'unpublished' %}
             <i><a href="{{ post.paperurl }}" rel="permalink">{{ post.venue }}</a></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.
 
+            {% elsif post.pubsource == 'book' %}
+            <i><a href="{{ post.paperurl }}" rel="permalink">{{ post.venue }}</a></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.  
+
           {% elsif post.pubsource == 'proceeding' %}
             <i><a href="{{ post.paperurl }}" rel="permalink">{{ post.venue }}</a></i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.  
 

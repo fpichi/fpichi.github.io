@@ -27,6 +27,14 @@ author_profile: true
   {% endif %}
 {% endfor %}
 
+## Books
+
+{% for post in site.publications reversed %}
+  {% if post.pubsource == "book" %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+
 ## Proceedings
 
 {% for post in site.publications reversed %}
