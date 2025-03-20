@@ -1,10 +1,10 @@
 ---
 title: "Deflation-Based Certified Greedy Algorithm and Adaptivity for Bifurcating Nonlinear PDEs"
 collection: publications
-permalink: /publication/2025-01-7-Deflation-Based-Certified-Greedy-Algorithm-and-Adaptivity-for-Bifurcating-Nonlinear-PDEs
+permalink: /publication/2025-01-6-Deflation-Based-Certified-Greedy-Algorithm-and-Adaptivity-for-Bifurcating-Nonlinear-PDEs
 excerpt: 'arXiv:2501.12361'
 paperurl: 'https://arxiv.org/abs/2501.12361'
-date: 2025-01-7
+date: 2025-01-6
 item: 21
 venue: 'arXiv:2501.12361'
 paperurl: 'https://doi.org/10.48550/arXiv.2501.12361'

@@ -1,8 +1,8 @@
 ---
 title: "GFN: A Graph Feedforward Network for Resolution-Invariant Reduced Operator Learning in Multifidelity Applications"
 collection: publications
-permalink: /publication/2024-01-18-GFN-A-Graph-Feedforward-Network-for-Resolution-Invariant-Reduced-Operator-Learning-in-Multifidelity-Applications
-date: 2024-01-18
+permalink: /publication/2024-01-17-GFN-A-Graph-Feedforward-Network-for-Resolution-Invariant-Reduced-Operator-Learning-in-Multifidelity-Applications
+date: 2024-01-17
 item: 14
 venue: 'Computer Methods in Applied Mechanics and Engineering'
 paperurl: 'https://doi.org/10.1016/j.cma.2024.117458'

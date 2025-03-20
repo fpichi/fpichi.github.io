@@ -1,10 +1,10 @@
 ---
 title: "Neural Empirical Interpolation Method for Nonlinear Model Reduction"
 collection: publications
-permalink: /publication/2024-01-4-Neural-Empirical-Interpolation-Method-for-Nonlinear-Model-Reduction
+permalink: /publication/2024-01-3-Neural-Empirical-Interpolation-Method-for-Nonlinear-Model-Reduction
 excerpt: 'arXiv:2406.03562'
 paperurl: 'https://arxiv.org/abs/2406.03562'
-date: 2024-01-4
+date: 2024-01-3
 item: 18
 venue: 'arXiv:2406.03562'
 authors: 'Max Hirsch, Federico Pichi, Jan Hesthaven'

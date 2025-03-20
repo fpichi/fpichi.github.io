@@ -1,10 +1,10 @@
 ---
 title: "A Stochastic Perturbation Approach to Nonlinear Bifurcating Problems"
 collection: publications
-permalink: /publication/2024-01-3-A-Stochastic-Perturbation-Approach-to-Nonlinear-Bifurcating-Problems
+permalink: /publication/2024-01-2-A-Stochastic-Perturbation-Approach-to-Nonlinear-Bifurcating-Problems
 excerpt: 'arXiv:2402.16803'
 paperurl: 'https://arxiv.org/abs/2402.16803'
-date: 2024-01-3
+date: 2024-01-2
 item: 17
 venue: 'arXiv:2402.16803'
 paperurl: 'https://doi.org/10.48550/arXiv.2402.16803'

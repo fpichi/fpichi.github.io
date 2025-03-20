@@ -1,8 +1,8 @@
 ---
 title: "Efficient computation of bifurcation diagrams with a deflated approach to reduced basis spectral element method"
 collection: publications
-permalink: /publication/2020-01-10-Efficient-computation-of-bifurcation-diagrams-with-a-deflated-approach-to-reduced-basis-spectral-element-method
-date: 2020-01-10
+permalink: /publication/2020-01-9-Efficient-computation-of-bifurcation-diagrams-with-a-deflated-approach-to-reduced-basis-spectral-element-method
+date: 2020-01-9
 item: 8
 venue: 'Advances in Computational Mathematics'
 paperurl: 'https://doi.org/10.1007/s10444-020-09827-6'

@@ -1,10 +1,10 @@
 ---
 title: "Projection-Based Reduced Order Modelling for Unsteady Parametrized Optimal Control Problems in 3D Cardiovascular Flows"
 collection: publications
-permalink: /publication/2024-01-2-Projection-Based-Reduced-Order-Modelling-for-Unsteady-Parametrized-Optimal-Control-Problems-in-3D-Cardiovascular-Flows
+permalink: /publication/2024-01-1-Projection-Based-Reduced-Order-Modelling-for-Unsteady-Parametrized-Optimal-Control-Problems-in-3D-Cardiovascular-Flows
 excerpt: 'arXiv:2410.20828'
 paperurl: 'https://arxiv.org/abs/2410.20828'
-date: 2024-01-2
+date: 2024-01-1
 item: 16
 venue: 'arXiv:2410.20828'
 paperurl: 'https://doi.org/10.48550/arXiv.2410.20828'

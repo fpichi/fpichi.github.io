@@ -141,7 +141,8 @@ for pubsource in publist:
 
             md += "\ndate: " + str(pub_date)
 
-            md += "\nitem: " + str(item)
+            print("Check here if you notice something strange, it should prevent rebuilding the bib from scratch")
+            # md += "\nitem: " + str(item) 
 
             md += "\nvenue: '" + html_escape(venue) + "'"
 

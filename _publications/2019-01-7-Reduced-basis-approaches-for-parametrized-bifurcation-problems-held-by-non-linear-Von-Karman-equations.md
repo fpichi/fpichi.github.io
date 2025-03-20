@@ -1,8 +1,8 @@
 ---
 title: "Reduced basis approaches for parametrized bifurcation problems held by non-linear Von Karman equations"
 collection: publications
-permalink: /publication/2019-01-8-Reduced-basis-approaches-for-parametrized-bifurcation-problems-held-by-non-linear-Von-Karman-equations
-date: 2019-01-8
+permalink: /publication/2019-01-7-Reduced-basis-approaches-for-parametrized-bifurcation-problems-held-by-non-linear-Von-Karman-equations
+date: 2019-01-7
 item: 6
 venue: 'Journal of Scientific Computing'
 paperurl: 'https://doi.org/10.1007/s10915-019-01003-3'
