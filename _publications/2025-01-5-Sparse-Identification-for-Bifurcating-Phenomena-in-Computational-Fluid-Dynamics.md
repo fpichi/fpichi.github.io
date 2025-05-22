@@ -5,7 +5,7 @@ permalink: /publication/2025-01-5-Sparse-Identification-for-Bifurcating-Phenomen
 excerpt: 'arXiv:2502.11194'
 paperurl: 'https://arxiv.org/abs/2502.11194'
 date: 2025-01-5
-item: 20
+item: 21
 venue: 'arXiv:2502.11194'
 paperurl: 'https://doi.org/10.48550/arXiv.2502.11194'
 authors: 'Lorenzo Tomada, Moaad Khamlich, Federico Pichi, Gianluigi Rozza'

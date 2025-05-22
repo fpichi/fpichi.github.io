@@ -5,6 +5,11 @@ permalink: /talks/
 author_profile: true
 ---
 
+* YIC 2025 [(talk)](https://yic2025.cimne.com). 
+* SIMAI 2025 [(talk)](https://simai2025.cimne.com). 
+* ADMOS 2025 [(talk)](https://admos2025.cimne.com). 
+* M2P 2025 [(talk)](https://www.m2p2025.com/m2p2025). 
+* COUPLED 2025 [(talk)](https://coupled2025.cimne.com). 
 * EMS-TAG-SCIML 2025 [(keynote)](https://www.mate.polimi.it/events/EMS-TAG-SciML-25/index.php).
 * GNCS-SIAM Chapters Meeting 2025 [(keynote)](https://sites.google.com/view/gncs-siam-chapters/home-page?authuser=0).
 * AICOMAS 2025 [(keynote)](https://dte_aicomas_2025.iacm.info/event/programme). 

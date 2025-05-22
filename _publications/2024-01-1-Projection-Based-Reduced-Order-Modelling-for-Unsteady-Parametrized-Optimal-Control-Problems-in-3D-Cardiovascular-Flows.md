@@ -5,7 +5,7 @@ permalink: /publication/2024-01-1-Projection-Based-Reduced-Order-Modelling-for-U
 excerpt: 'arXiv:2410.20828'
 paperurl: 'https://arxiv.org/abs/2410.20828'
 date: 2024-01-1
-item: 16
+item: 17
 venue: 'arXiv:2410.20828'
 paperurl: 'https://doi.org/10.48550/arXiv.2410.20828'
 authors: 'Surabhi Rathore, Pasquale Africa, Francesco Ballarin, Federico Pichi, Michele Girfoglio, Gianluigi Rozza'

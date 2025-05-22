@@ -5,7 +5,7 @@ permalink: /publication/2024-01-3-Neural-Empirical-Interpolation-Method-for-Nonl
 excerpt: 'arXiv:2406.03562'
 paperurl: 'https://arxiv.org/abs/2406.03562'
 date: 2024-01-3
-item: 18
+item: 19
 venue: 'arXiv:2406.03562'
 authors: 'Max Hirsch, Federico Pichi, Jan Hesthaven'
 pubsource: 'unpublished'

@@ -3,32 +3,31 @@ title: "Deflation-Based Certified Greedy Algorithm and Adaptivity for Bifurcatin
 collection: publications
 permalink: /publication/2025-01-6-Deflation-Based-Certified-Greedy-Algorithm-and-Adaptivity-for-Bifurcating-Nonlinear-PDEs
 excerpt: 'arXiv:2501.12361'
-paperurl: 'https://arxiv.org/abs/2501.12361'
-date: 2025-01-6
-item: 21
-venue: 'arXiv:2501.12361'
-paperurl: 'https://doi.org/10.48550/arXiv.2501.12361'
+paperurl: 'https://doi.org/10.1016/j.cnsns.2025.108941'
+date: 2025-01-18
+item: 16
+venue: 'Communications in Nonlinear Science and Numerical Simulation'
+paperurl: 'https://doi.org/10.1016/j.cnsns.2025.108941'
 authors: 'Federico Pichi, Maria Strazzullo'
-pubsource: 'unpublished'
+pubsource: 'journal'
 biblio: >
-    @unpublished{PichiDeflationbasedCertifiedGreedy2025,\
-    
+    @article{PichiDeflationbasedCertifiedGreedy2025a,\
+        
     title = {Deflation-Based Certified Greedy Algorithm and Adaptivity for Bifurcating Nonlinear {{PDEs}}},\
-    
+
     author = {Pichi, Federico and Strazzullo, Maria},\
-    
+
     year = {2025},\
-    
-    note = {arXiv:2501.12361},\
-    
-    eprint = {2501.12361},\
-    
-    primaryclass = {math},\
-    
-    publisher = {arXiv},\
-    
-    doi = {10.48550/arXiv.2501.12361},\
-    
-    archiveprefix = {arXiv}
+
+    journal = {Communications in Nonlinear Science and Numerical Simulation},\
+
+    volume = {149},\
+
+    pages = {108941},\
+
+    doi = {10.1016/j.cnsns.2025.108941},\
+
+    urldate = {2025-05-22}
     }
+
 ---

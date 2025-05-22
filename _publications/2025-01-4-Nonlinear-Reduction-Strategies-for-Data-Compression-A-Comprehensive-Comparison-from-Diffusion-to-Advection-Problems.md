@@ -5,7 +5,7 @@ permalink: /publication/2025-01-4-Nonlinear-Reduction-Strategies-for-Data-Compre
 excerpt: 'arXiv:2501.12816'
 paperurl: 'https://arxiv.org/abs/2501.12816'
 date: 2025-01-4
-item: 19
+item: 20
 venue: 'arXiv:2501.12816'
 paperurl: 'https://doi.org/10.48550/arXiv.2501.12816'
 authors: 'Isabella Gonnella, Federico Pichi, Gianluigi Rozza'

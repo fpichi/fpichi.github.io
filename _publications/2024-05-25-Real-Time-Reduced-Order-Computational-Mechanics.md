@@ -3,7 +3,7 @@ title: "Real Time Reduced Order Computational Mechanics: Parametric PDEs Worked 
 collection: publications
 permalink: /publication/2024-05-25-Real-Time-Reduced-Order-Computational-Mechanics
 date: 2024-05-25
-item: 0
+item: 1
 venue: 'Springer Nature Switzerland'
 paperurl: 'https://doi.org/10.1007/978-3-031-49892-3'
 authors: 'Gianluigi Rozza, Francesco Ballarin, Leonardo Scandurra, Federico Pichi'
