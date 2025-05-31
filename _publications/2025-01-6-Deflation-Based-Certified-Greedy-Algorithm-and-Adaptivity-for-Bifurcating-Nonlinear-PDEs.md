@@ -4,8 +4,8 @@ collection: publications
 permalink: /publication/2025-01-6-Deflation-Based-Certified-Greedy-Algorithm-and-Adaptivity-for-Bifurcating-Nonlinear-PDEs
 excerpt: 'arXiv:2501.12361'
 paperurl: 'https://doi.org/10.1016/j.cnsns.2025.108941'
-date: 2025-01-18
-item: 16
+date: 2025-01-20
+item: 17
 venue: 'Communications in Nonlinear Science and Numerical Simulation'
 paperurl: 'https://doi.org/10.1016/j.cnsns.2025.108941'
 authors: 'Federico Pichi, Maria Strazzullo'
@@ -25,9 +25,7 @@ biblio: >
 
     pages = {108941},\
 
-    doi = {10.1016/j.cnsns.2025.108941},\
-
-    urldate = {2025-05-22}
+    doi = {10.1016/j.cnsns.2025.108941}
     }
 
 ---
