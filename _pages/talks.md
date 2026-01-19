@@ -5,6 +5,7 @@ permalink: /talks/
 author_profile: true
 ---
 
+* MATH4AIML 2026 [(talk)](https://sites.google.com/uniroma1.it/umiworkshop2025/math4aiml-umi-workshop). 
 * YIC 2025 [(talk)](https://yic2025.cimne.com). 
 * SIMAI 2025 [(talk)](https://simai2025.cimne.com). 
 * ADMOS 2025 [(talk)](https://admos2025.cimne.com). 

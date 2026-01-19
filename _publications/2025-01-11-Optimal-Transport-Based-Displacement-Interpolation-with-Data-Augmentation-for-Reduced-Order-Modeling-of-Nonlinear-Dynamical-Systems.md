@@ -1,9 +1,9 @@
 ---
 title: "Optimal Transport-Based Displacement Interpolation with Data Augmentation for Reduced Order Modeling of Nonlinear Dynamical Systems"
 collection: publications
-permalink: /publication/2025-01-18-Optimal-Transport-Based-Displacement-Interpolation-with-Data-Augmentation-for-Reduced-Order-Modeling-of-Nonlinear-Dynamical-Systems
-date: 2025-01-19
-item: 16
+permalink: /publication/2025-01-11-Optimal-Transport-Based-Displacement-Interpolation-with-Data-Augmentation-for-Reduced-Order-Modeling-of-Nonlinear-Dynamical-Systems
+date: 2025-01-11
+item: 11
 venue: 'Journal of Computational Physics'
 paperurl: 'https://doi.org/10.1016/j.jcp.2025.113938'
 authors: 'Moaad Khamlich, Federico Pichi, Michele Girfoglio, Annalisa Quaini, Gianluigi Rozza'

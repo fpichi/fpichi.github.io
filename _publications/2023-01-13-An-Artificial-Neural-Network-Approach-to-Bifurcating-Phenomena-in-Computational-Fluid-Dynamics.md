@@ -3,7 +3,7 @@ title: "An Artificial Neural Network Approach to Bifurcating Phenomena in Comput
 collection: publications
 permalink: /publication/2023-01-13-An-Artificial-Neural-Network-Approach-to-Bifurcating-Phenomena-in-Computational-Fluid-Dynamics
 date: 2023-01-13
-item: 11
+item: 6
 venue: 'Computers &amp; Fluids'
 paperurl: 'https://doi.org/10.1016/j.compfluid.2023.105813'
 authors: 'Federico Pichi, Francesco Ballarin, Gianluigi Rozza, Jan Hesthaven'

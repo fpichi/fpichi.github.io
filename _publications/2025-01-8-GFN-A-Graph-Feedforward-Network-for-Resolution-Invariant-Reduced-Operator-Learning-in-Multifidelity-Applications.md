@@ -1,9 +1,9 @@
 ---
 title: "GFN: A Graph Feedforward Network for Resolution-Invariant Reduced Operator Learning in Multifidelity Applications"
 collection: publications
-permalink: /publication/2024-01-17-GFN-A-Graph-Feedforward-Network-for-Resolution-Invariant-Reduced-Operator-Learning-in-Multifidelity-Applications
-date: 2024-01-17
-item: 13
+permalink: /publication/2024-01-8-GFN-A-Graph-Feedforward-Network-for-Resolution-Invariant-Reduced-Operator-Learning-in-Multifidelity-Applications
+date: 2024-01-8
+item: 8
 venue: 'Computer Methods in Applied Mechanics and Engineering'
 paperurl: 'https://doi.org/10.1016/j.cma.2024.117458'
 authors: 'Oisin Morrison, Federico Pichi, Jan Hesthaven'

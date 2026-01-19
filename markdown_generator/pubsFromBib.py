@@ -27,13 +27,13 @@ import re
 
 # todo: incorporate different collection types rather than a catch all publications, requires other changes to template
 publist = {
-    "proceeding": {
-        "file": "refs.bib",
-        "venuekey": "booktitle",
-        "venue-pretext": "In the proceedings of ",
-        "collection": {"name": "publications",
-                       "permalink": "/publication/"}
-    },
+    # "proceeding": {
+    #     "file": "refs.bib",
+    #     "venuekey": "booktitle",
+    #     "venue-pretext": "In the proceedings of ",
+    #     "collection": {"name": "publications",
+    #                    "permalink": "/publication/"}
+    # },
     "journal": {
         "file": "refs.bib",
         "venuekey": "journal",
@@ -41,13 +41,13 @@ publist = {
         "collection": {"name": "publications",
                        "permalink": "/publication/"}
     },
-    "unpublished": {
-        "file": "refs.bib",
-        "venuekey": "note",
-        "venue-pretext": "",
-        "collection": {"name": "publications",
-                       "permalink": "/publication/"}
-    }
+    # "unpublished": {
+    #     "file": "refs.bib",
+    #     "venuekey": "note",
+    #     "venue-pretext": "",
+    #     "collection": {"name": "publications",
+    #                    "permalink": "/publication/"}
+    # }
 }
 
 html_escape_table = {
@@ -141,7 +141,7 @@ for pubsource in publist:
 
             md += "\ndate: " + str(pub_date)
 
-            print("Check here if you notice something strange, it should prevent rebuilding the bib from scratch")
+            # print("Check here if you notice something strange, it should prevent rebuilding the bib from scratch")
             # md += "\nitem: " + str(item) 
 
             md += "\nvenue: '" + html_escape(venue) + "'"
@@ -157,6 +157,8 @@ for pubsource in publist:
             md += "\npubsource: '" + html_escape(pubsource) + "'"
 
             md += "\n---"
+
+            # print(md)
 
             # Markdown description for individual page
             # if note:

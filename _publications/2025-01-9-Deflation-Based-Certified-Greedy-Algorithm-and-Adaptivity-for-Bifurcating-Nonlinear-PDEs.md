@@ -1,11 +1,11 @@
 ---
 title: "Deflation-Based Certified Greedy Algorithm and Adaptivity for Bifurcating Nonlinear PDEs"
 collection: publications
-permalink: /publication/2025-01-6-Deflation-Based-Certified-Greedy-Algorithm-and-Adaptivity-for-Bifurcating-Nonlinear-PDEs
+permalink: /publication/2025-01-9-Deflation-Based-Certified-Greedy-Algorithm-and-Adaptivity-for-Bifurcating-Nonlinear-PDEs
 excerpt: 'arXiv:2501.12361'
 paperurl: 'https://doi.org/10.1016/j.cnsns.2025.108941'
-date: 2025-01-20
-item: 17
+date: 2025-01-9
+item: 9
 venue: 'Communications in Nonlinear Science and Numerical Simulation'
 paperurl: 'https://doi.org/10.1016/j.cnsns.2025.108941'
 authors: 'Federico Pichi, Maria Strazzullo'
