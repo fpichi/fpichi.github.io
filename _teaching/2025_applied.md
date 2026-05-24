@@ -4,7 +4,7 @@ collection: teaching
 type: "Lecturer"
 permalink: /teaching/2025_applied
 venue: "SISSA"
-date: 2025-04-01
-item: 11
+date: 2025-09-01
+item: 12
 location: "Trieste, Italy"
 ---
