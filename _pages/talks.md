@@ -5,12 +5,18 @@ permalink: /talks/
 author_profile: true
 ---
 
+* MORe 2026 [(talk)](https://more2026.sciencesconf.org).
+* StructApp 2026 [(talk)](https://sites.google.com/view/structapp2026/).
+* WCCM-ECCOMAS 2026 [(talk)](https://wccm-eccomas2026.org).
+* NUMERA 2026 [(talk)](https://numera-workshop.github.io).
+* SPARCL 2026 [(talk)](https://camillafiorini.netlify.app/sparcl_workshop/).
 * MATH4AIML 2026 [(talk)](https://sites.google.com/uniroma1.it/umiworkshop2025/math4aiml-umi-workshop). 
-* YIC 2025 [(talk)](https://yic2025.cimne.com). 
 * SIMAI 2025 [(talk)](https://simai2025.cimne.com). 
+* YIC 2025 [(talk)](https://yic2025.cimne.com).
 * ADMOS 2025 [(talk)](https://admos2025.cimne.com). 
 * M2P 2025 [(talk)](https://www.m2p2025.com/m2p2025). 
 * COUPLED 2025 [(talk)](https://coupled2025.cimne.com). 
+* MDN Pizza Seminars@IAC-CNR 2025 [(invited seminar)](https://www1.mat.uniroma1.it/ricerca/seminari/mdn/index.cgi).
 * EMS-TAG-SCIML 2025 [(keynote)](https://www.mate.polimi.it/events/EMS-TAG-SciML-25/index.php).
 * GNCS-SIAM Chapters Meeting 2025 [(keynote)](https://sites.google.com/view/gncs-siam-chapters/home-page?authuser=0).
 * AICOMAS 2025 [(keynote)](https://dte_aicomas_2025.iacm.info/event/programme). 

@@ -2,35 +2,36 @@
 title: "Nonlinear Reduction Strategies for Data Compression: A Comprehensive Comparison from Diffusion to Advection Problems"
 collection: publications
 permalink: /publication/2025-01-2-Nonlinear-Reduction-Strategies-for-Data-Compression-A-Comprehensive-Comparison-from-Diffusion-to-Advection-Problems
-excerpt: 'arXiv:2501.12816'
-paperurl: 'https://arxiv.org/abs/2501.12816'
-date: 2025-01-2
-item: 2
-venue: 'arXiv:2501.12816'
-paperurl: 'https://doi.org/10.48550/arXiv.2501.12816'
-authors: 'Isabella Gonnella, Federico Pichi, Gianluigi Rozza'
-pubsource: 'unpublished'
+date: 2026-01-01
+item: 6
+venue: 'In the proceedings of Scientific Machine Learning'
+paperurl: 'https://doi.org/10.1007/978-3-032-11527-0_9'
+authors: 'Isabella Carla Gonnella, Federico Pichi, Gianluigi Rozza'
+pubsource: 'proceeding'
 biblio: >
-    @unpublished{GonnellaNonlinearReductionStrategies2025,\
+    @incollection{GonnellaNonlinearReductionStrategies2026,\
 
-    title = {Nonlinear Reduction Strategies for Data Compression: A Comprehensive Comparison from Diffusion to Advection Problems},\
-    
-    shorttitle = {Nonlinear Reduction Strategies for Data Compression},\
-    
     author = {Gonnella, Isabella Carla and Pichi, Federico and Rozza, Gianluigi},\
-    
-    year = {2025},\
-    
-    note = {arXiv:2501.12816},\
-    
-    eprint = {2501.12816},\
-    
-    primaryclass = {math},\
-    
-    publisher = {arXiv},\
-    
-    doi = {10.48550/arXiv.2501.12816},\
-    
-    archiveprefix = {arXiv}
+
+    editor = {Pichi, Federico and Rozza, Gianluigi and Strazzullo, Maria and Torlo, Davide},\
+
+    title = {Nonlinear {{Reduction Strategies}} for~{{Data Compression}}: {{A~Comprehensive Comparison}} from~{{Diffusion}} to~{{Advection Problems}}},\
+
+    shorttitle = {Nonlinear {{Reduction Strategies}} for~{{Data Compression}}},\
+
+    booktitle = {Scientific {{Machine Learning}}},\
+
+    year = {2026},\
+
+    pages = {177--198},\
+
+    publisher = {Springer Nature Switzerland},\
+
+    address = {Cham},\
+
+    doi = {10.1007/978-3-032-11527-0_9},\
+
+    isbn = {978-3-032-11527-0}\
+
     }
 ---

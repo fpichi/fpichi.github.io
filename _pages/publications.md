@@ -13,32 +13,28 @@ author_profile: true
 
 ## Preprints
 
-{% for post in site.publications reversed %}
-  {% if post.pubsource == "unpublished" %}
-    {% include archive-single.html %}
-  {% endif %}
+{% assign preprints = site.publications | where: "pubsource", "unpublished" | sort: "item" | reverse %}
+{% for post in preprints %}
+  {% include archive-single.html %}
 {% endfor %}
 
 ## Published
 
-{% for post in site.publications reversed %}
-  {% if post.pubsource == "journal" %}
-    {% include archive-single.html %}
-  {% endif %}
+{% assign journal_publications = site.publications | where: "pubsource", "journal" | sort: "item" | reverse %}
+{% for post in journal_publications %}
+  {% include archive-single.html %}
 {% endfor %}
 
 ## Books
 
-{% for post in site.publications reversed %}
-  {% if post.pubsource == "book" %}
-    {% include archive-single.html %}
-  {% endif %}
+{% assign books = site.publications | where: "pubsource", "book" | sort: "item" | reverse %}
+{% for post in books %}
+  {% include archive-single.html %}
 {% endfor %}
 
 ## Proceedings
 
-{% for post in site.publications reversed %}
-  {% if post.pubsource == "proceeding" %}
-    {% include archive-single.html %}
-  {% endif %}
+{% assign proceedings = site.publications | where: "pubsource", "proceeding" | sort: "item" | reverse %}
+{% for post in proceedings %}
+  {% include archive-single.html %}
 {% endfor %}

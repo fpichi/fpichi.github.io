@@ -1,182 +1,268 @@
-#!/usr/bin/env python
-# coding: utf-8
+#!/usr/bin/env python3
+"""Synchronize publications with refs.bib, using the bk front matter style.
 
-# # Publications markdown generator for academicpages
-#
-# Takes a set of bibtex of publications and converts them for use with [academicpages.github.io](academicpages.github.io).
-# This is an interactive Jupyter notebook [see more info here](http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html).
-#
-# The core python code is also in `pubsFromBibs.py`.
-# Run either from the `markdown_generator` folder after replacing updating the publist dictionary with:
-# * bib file names
-# * specific venue keys based on your bib file preferences
-# * any specific pre-text for specific files
-# * Collection Name (future feature)
-#
-# TODO: Make this work with other databases of citations,
-# TODO: Merge this with the existing TSV parsing solution
+Requires pybtex (which includes latexcodec). Run from any directory:
+    python3 markdown_generator/pubsFromBib.py
+    python3 markdown_generator/pubsFromBib.py --output-dir /tmp/publications
 
+Generate preprints, journals, books, and proceedings in bibliography order.
+Existing publication URLs are reused when the BibTeX key, DOI, or title matches.
+Duplicate and obsolete publication files are moved to the excluded bk directory.
+"""
 
-from pybtex.database.input import bibtex
-import pybtex.database.input.bibtex
-from time import strptime
-import string
+import argparse
+import codecs
 import html
-import os
 import re
+from collections import Counter
+from datetime import date
+from pathlib import Path
 
-# todo: incorporate different collection types rather than a catch all publications, requires other changes to template
-publist = {
-    # "proceeding": {
-    #     "file": "refs.bib",
-    #     "venuekey": "booktitle",
-    #     "venue-pretext": "In the proceedings of ",
-    #     "collection": {"name": "publications",
-    #                    "permalink": "/publication/"}
-    # },
-    "journal": {
-        "file": "refs.bib",
-        "venuekey": "journal",
-        "venue-pretext": "",
-        "collection": {"name": "publications",
-                       "permalink": "/publication/"}
-    },
-    # "unpublished": {
-    #     "file": "refs.bib",
-    #     "venuekey": "note",
-    #     "venue-pretext": "",
-    #     "collection": {"name": "publications",
-    #                    "permalink": "/publication/"}
-    # }
+import latexcodec  # Registers the ulatex codec used for accented author names.
+import yaml
+from pybtex.database import parse_file
+
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+CATEGORIES = {
+    "misc": "unpublished", "unpublished": "unpublished",
+    "article": "journal", "book": "book", "booklet": "book",
+    "incollection": "proceeding", "inproceedings": "proceeding",
+    "proceedings": "proceeding", "conference": "proceeding",
 }
 
-html_escape_table = {
-    "&": "&amp;",
-    '"': "&quot;",
-    "'": "&apos;"
-}
 
-def html_escape(text):
-    """Produce entities within text."""
-    return "".join(html_escape_table.get(c, c) for c in text)
+def plain_text(value):
+    """Remove BibTeX grouping while preserving accents and complete names."""
+    value = codecs.decode(value, "ulatex")
+    return " ".join(value.replace("{", "").replace("}", "").split())
 
-pub_day_list = [str(i) for i in range(1, 32)]
-item = 1
-for pubsource in publist:
-    print("")
-    print("Scanning for ", pubsource)
-    parser = bibtex.Parser()
-    bibdata = parser.parse_file(publist[pubsource]["file"])
 
-    # loop through the individual references in a given bibtex file
-    for (i, bib_id) in enumerate(bibdata.entries):
-        # reset default date
-        pub_year = "1900"
-        pub_month = "01"
-        pub_day = pub_day_list[i]
+def html_escape(value):
+    return html.escape(value, quote=True).replace("&#x27;", "&apos;")
 
-        b = bibdata.entries[bib_id].fields
-        try:
-            pub_year = f'{b["year"]}'
 
-            # todo: this hack for month and day needs some cleanup
-            if "month" in b.keys():
-                if(len(b["month"]) < 3):
-                    pub_month = "0"+b["month"]
-                    pub_month = pub_month[-2:]
-                elif(b["month"] not in range(12)):
-                    tmnth = strptime(b["month"][:3], '%b').tm_mon
-                    pub_month = "{:02d}".format(tmnth)
-                else:
-                    pub_month = str(b["month"])
-            if "day" in b.keys():
-                pub_day = str(b["day"])
+def title_key(value):
+    return re.sub(r"[^\w]", "", html.unescape(value).casefold())
 
-            pub_date = pub_year+"-"+pub_month+"-"+pub_day
 
-            # strip out {} as needed (some bibtex entries that maintain formatting)
-            clean_title = b["title"].replace("{", "").replace("}", "").replace("\\", "").replace(" ", "-")
+def doi_key(value):
+    return re.sub(r"^https?://(?:dx\.)?doi\.org/|^doi:\s*", "",
+                  value.strip(), flags=re.IGNORECASE).casefold()
 
-            url_slug = re.sub("\\[.*\\]|[^a-zA-Z0-9_-]", "", clean_title)
-            url_slug = url_slug.replace("--", "-")
 
-            md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--", "-")
-            html_filename = (str(pub_date) + "-" + url_slug).replace("--", "-")
+def read_front_matter(path):
+    content = path.read_text(encoding="utf-8")
+    match = re.match(r"\A---[ \t]*\n(.*?)\n---[ \t]*(?:\n|\Z)", content, re.DOTALL)
+    if not match:
+        raise ValueError(f"Missing YAML front matter in {path}")
+    return yaml.safe_load(match[1])
 
-            # Build Citation from text
-            citation = ""
 
-            # citation authors - todo - add highlighting for primary author?
-            for author in bibdata.entries[bib_id].persons["author"]:
-                citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
-
-            # Creating authors
-            authors = ""
-            for author in bibdata.entries[bib_id].persons["author"]:
-                authors = authors+author.first_names[0]+" "+author.last_names[0]+", "
-            authors = authors[:-2]
-            authors.replace("{", "").replace("}", "")
-            # citation title
-            # authors = authors + "\"" + html_escape(b["title"].replace("{", "").replace("}", "").replace("\\", "")) + ".\""
-
-            # add venue logic depending on citation type
-            venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["venuekey"]].replace("{", "").replace("}", "").replace("\\", "")
-
-            citation = citation + " " + html_escape(venue)
-            citation = citation + ", " + pub_year + "."
-
-            # YAML variables
-            md = "---\ntitle: \"" + html_escape(b["title"].replace("{", "").replace("}", "").replace("\\", "")) + '"\n'
-
-            md += """collection: """ + publist[pubsource]["collection"]["name"]
-
-            md += """\npermalink: """ + publist[pubsource]["collection"]["permalink"] + html_filename
-
-            note = False
-            if "note" in b.keys():
-                if len(str(b["note"])) > 5:
-                    md += "\nexcerpt: '" + html_escape(b["note"]) + "'"
-                    md += "\npaperurl: '" + 'https://arxiv.org/abs/' + b["note"][6:] + "'"
-                    note = True
-
-            md += "\ndate: " + str(pub_date)
-
-            # print("Check here if you notice something strange, it should prevent rebuilding the bib from scratch")
-            # md += "\nitem: " + str(item) 
-
-            md += "\nvenue: '" + html_escape(venue) + "'"
-
-            url = False
-            if "doi" in b.keys():
-                if len(str(b["doi"])) > 5:
-                    md += "\npaperurl: '" + 'https://doi.org/' + b["doi"] + "'"
-                    url = True
-
-            md += "\nauthors: '" + html_escape(authors) + "'"
-
-            md += "\npubsource: '" + html_escape(pubsource) + "'"
-
-            md += "\n---"
-
-            # print(md)
-
-            # Markdown description for individual page
-            # if note:
-            #     md += "\n" + html_escape(b["note"]) + "\n"
-
-            # if url:
-            #     md += "\n[Access paper here](" + b["url"] + "){:target=\"_blank\"}\n"
-            # else:
-            #     md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+")
-            # {:target=\"_blank\"} for full citation"
-
-            md_filename = os.path.basename(md_filename)
-
-            with open("../_publications/" + md_filename, 'w') as f:
-                f.write(md)
-            print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60], "..."*(len(b['title']) > 60), "\"")
-            item += 1
-        # field may not exist for a reference
-        except KeyError as e:
-            # print(f'WARNING Missing Expected Field {e} from entry {bib_id}: \"', b["title"][:30], "..."*(len(b['title']) > 30), "\"")
+def existing_publications(output_dir):
+    """Index only top-level output files; never modify the backup directory."""
+    index = {}
+    managed = set()
+    for path in sorted(output_dir.glob("*.md")):
+        data = read_front_matter(path)
+        if (data.get("collection") != "publications"
+                or data.get("pubsource") not in CATEGORIES.values()):
             continue
+        managed.add(path)
+        key = re.search(r"@\w+\s*\{\s*([^,]+),", data.get("biblio", ""))
+        identities = [("title", title_key(data["title"]))]
+        if key:
+            identities.append(("key", key[1]))
+        url = data.get("paperurl", "")
+        if re.match(r"https?://(?:dx\.)?doi\.org/", url, re.IGNORECASE):
+            identities.append(("doi", doi_key(url)))
+        for identity in identities:
+            index.setdefault(identity, []).append(path)
+    return index, managed
+
+
+def select_publications(bibliography):
+    """Keep one entry per work, preferring a publication over its preprint."""
+    selected = []
+    identities = {}
+    for key, entry in bibliography.entries.items():
+        category = CATEGORIES.get(entry.type.lower())
+        if category is None:
+            print(f"Skipping unsupported entry {key} ({entry.type})")
+            continue
+        fields = entry.fields
+        tokens = [("title", title_key(plain_text(fields["title"])))]
+        if fields.get("doi"):
+            tokens.append(("doi", doi_key(fields["doi"])))
+        previous = {identities[token] for token in tokens if token in identities}
+        if previous:
+            if len(previous) > 1:
+                raise ValueError(f"Conflicting publication identities for {key}")
+            position = previous.pop()
+            old_key, old_entry = selected[position]
+            if (CATEGORIES[old_entry.type.lower()] == "unpublished"
+                    and category != "unpublished"):
+                previous_position = position
+                selected[position] = None
+                position = len(selected)
+                selected.append((key, entry))
+                identities = {token: position if old_position == previous_position
+                              else old_position
+                              for token, old_position in identities.items()}
+                print(f"Replacing preprint {old_key} with {key}")
+            else:
+                print(f"Skipping duplicate {key}; using {old_key}")
+        else:
+            position = len(selected)
+            selected.append((key, entry))
+        for token in tokens:
+            identities[token] = position
+    return [entry for entry in selected if entry is not None]
+
+
+def preprint_label(fields):
+    if fields.get("eprint"):
+        return "arXiv:" + fields["eprint"]
+    for name in ("number", "note"):
+        if fields.get(name, "").lower().startswith("arxiv:"):
+            return fields[name]
+    return fields.get("note", "Preprint")
+
+
+def publication_venue(entry):
+    fields = entry.fields
+    category = CATEGORIES[entry.type.lower()]
+    if category == "unpublished":
+        return preprint_label(fields)
+    if category == "journal":
+        return fields["journal"]
+    if category == "book":
+        return fields["publisher"]
+    return "In the proceedings of " + fields.get("booktitle", fields.get("publisher", ""))
+
+
+def publication_date(fields):
+    """Use real dates when provided, otherwise January 1 of the given year."""
+    month = fields.get("month", "1")
+    if not month.isdigit():
+        months = ("jan", "feb", "mar", "apr", "may", "jun",
+                  "jul", "aug", "sep", "oct", "nov", "dec")
+        month = months.index(month[:3].lower()) + 1
+    return date(int(fields["year"]), int(month), int(fields.get("day", "1")))
+
+
+def render_publication(key, entry, item, stem):
+    fields = entry.fields
+    title = html_escape(plain_text(fields["title"]))
+    category = CATEGORIES[entry.type.lower()]
+    venue = html_escape(plain_text(publication_venue(entry)))
+    authors = []
+    for person in entry.persons.get("author", entry.persons.get("editor", [])):
+        given = plain_text(" ".join(person.first_names + person.middle_names))
+        family = plain_text(" ".join(person.prelast_names + person.last_names))
+        name = " ".join(part for part in (given, family) if part)
+        if person.lineage_names:
+            name += ", " + plain_text(" ".join(person.lineage_names))
+        authors.append(name)
+
+    lines = [
+        "---",
+        f'title: "{title}"',
+        "collection: publications",
+        f"permalink: /publication/{stem}",
+        f"date: {publication_date(fields).isoformat()}",
+        f"item: {item}",
+        f"venue: '{venue}'",
+    ]
+    if category == "unpublished":
+        lines.append(f"excerpt: '{html_escape(plain_text(preprint_label(fields)))}'")
+    doi = fields.get("doi", "").strip()
+    paper_url = (doi if doi.startswith(("https://", "http://"))
+                 else "https://doi.org/" + doi) if doi else fields.get("url")
+    if not paper_url and category == "unpublished":
+        label = preprint_label(fields)
+        if label.lower().startswith("arxiv:"):
+            paper_url = "https://arxiv.org/abs/" + label[6:].strip()
+    if paper_url:
+        lines.append(f"paperurl: '{html_escape(paper_url)}'")
+    lines.extend([
+        f"authors: '{html_escape(', '.join(authors))}'",
+        f"pubsource: '{category}'",
+        "biblio: >",
+    ])
+
+    # Match bk's folded YAML block and Markdown line breaks in the bib dropdown.
+    # Values from the parser already contain LaTeX escapes; keep them verbatim.
+    bib_fields = [(role, " and ".join(str(person) for person in people))
+                  for role, people in entry.persons.items()]
+    bib_fields.extend(fields.items())
+    bib_lines = [f"@{entry.type}{{{key},"]
+    bib_lines.extend(
+        f"{name} = {{{value}}}" + ("," if i < len(bib_fields) - 1 else "")
+        for i, (name, value) in enumerate(bib_fields)
+    )
+    bib_lines.append("}")
+    lines.append("\n\n".join(
+        "    " + line.strip() + ("\\" if i < len(bib_lines) - 1 else "")
+        for i, line in enumerate(bib_lines)
+    ))
+    lines.append("---")
+    return "\n".join(lines) + "\n"
+
+
+def generate(bib_path, output_dir):
+    bibliography = parse_file(str(bib_path))
+    entries = select_publications(bibliography)
+    existing, managed = existing_publications(output_dir)
+    remaining = Counter(CATEGORIES[entry.type.lower()] for _, entry in entries)
+    publications = []
+    for key, entry in entries:
+        # Each section counts down independently in bibliography order.
+        category = CATEGORIES[entry.type.lower()]
+        item = remaining[category]
+        remaining[category] -= 1
+        fields = entry.fields
+        title = plain_text(fields["title"])
+        candidates = (existing.get(("key", key))
+                      or existing.get(("doi", doi_key(fields.get("doi", ""))))
+                      or existing.get(("title", title_key(title))) or [])
+        path = candidates[0] if candidates else None
+        if path is None:
+            slug = re.sub(r"[^\w-]", "", title.replace(" ", "-"))
+            slug = re.sub(r"-+", "-", slug).strip("-")
+            path = output_dir / f"{publication_date(fields).isoformat()}-{slug}.md"
+        publications.append((path, render_publication(key, entry, item, path.stem)))
+
+    # Validate every entry before writing any files.
+    paths = [path for path, _ in publications]
+    if len(set(paths)) != len(paths):
+        raise ValueError("Multiple publications resolve to the same output file")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    for path, markdown in publications:
+        path.write_text(markdown, encoding="utf-8")
+        print(f"Generated {path.name}")
+    # Retain removed entries and duplicate files as backups, outside the site.
+    for path in sorted(managed - set(paths)):
+        backup = output_dir / "bk" / path.name
+        backup.parent.mkdir(parents=True, exist_ok=True)
+        suffix = 1
+        while backup.exists():
+            backup = backup.with_name(f"{path.stem}-{suffix}{path.suffix}")
+            suffix += 1
+        path.rename(backup)
+        print(f"Archived obsolete or duplicate publication: {path.name}")
+    return paths
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--bib", type=Path, default=SCRIPT_DIR / "refs.bib")
+    parser.add_argument("--output-dir", type=Path,
+                        default=SCRIPT_DIR.parent / "_publications")
+    args = parser.parse_args()
+    paths = generate(args.bib, args.output_dir)
+    print(f"Generated {len(paths)} publications in bibliography order.")
+
+
+if __name__ == "__main__":
+    main()
